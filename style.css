@@ -109,7 +109,7 @@ a{
 }
 
 #troubleshoot-footer {
-  color: white;
+  color: var(--main-color);
   height: 0;
   font-weight: lighter;
 }
