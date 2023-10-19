@@ -3,12 +3,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/icons/favicon.svg" type="image/svg+xml">
     <title>Is YouTube anti-adblock fixed yet?</title>
     <script src="./main.js"></script>
     
+    
 </head>
 <body>
-    <div id="menubar"></div>
+    <div id="menubar">
+        <a id="github-repo" href="https://github.com/drHyperion451/are-yt-ads-blocked">
+            <img src="assets/icons/code.svg" alt="Github Repo">
+        </a>
+    </div>
     <div id="main-detector">
         <div>
             <span id="main-question">Is YouTube anti-adblock fixed yet?</span>
@@ -18,14 +24,32 @@
         </div>
         <div id="codes-div">
             <div id="ublock-code-div">
-                <span id="ublock-code-label">Ublock</span>
-                <span id="ublock-code">...</span>
+                <div id="ublock-code-label" class="main-symbols">
+                    <img  src="assets/icons/ublock.svg" alt="Ublock Origin" srcset="">
+                </div>
+                <!-- <span id="ublock-code-label">Ublock</span> -->
+                <span id="ublock-code" class="code-ids">...</span>
             </div>
             <div id="youtube-code-div">
-                <span id="youtube-code-label">YouTube</span>
-                <span id="youtube-code">...</span>
+                <div id="youtube-code-label" class="main-symbols">
+                    <img src="assets/icons/youtube.svg" alt="Youtube" srcset="">
+                </div>
+                <!-- <span id="youtube-code-label">YouTube</span> -->
+                <span id="youtube-code" class="code-ids">...</span>
             </div>
         </div>
+        <div id="troubleshoot-footer">
+            <p>Still having an annoying popup? See <a href="https://www.reddit.com/r/uBlockOrigin/" target="_blank" rel="noopener noreferrer">r/uBlockOrigin</a></p>
+        </div>
     </div>
-    <div id="about"></div>
+    <div id="about">
+        <h1>What does this mean?</h1>
+            <p>It means that uBlock Origin has blocked the Anti-Adblocker script and now you can safely watch youtube without ads</p>
+        <h1>What should I do now</h1>
+            <p>You need to delete all cached ublock filters and update them. <b>There is a good guide made by the ublock origin team themselves in <a href="https://www.reddit.com/r/uBlockOrigin/" target="_blank" rel="noopener noreferrer">Reddit.</a></b></p>
+        <h1>What does this page do?</h1>
+            <p>It simply gets the info of the last <a href="https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt" target="_blank" rel="noopener noreferrer">uBlock fix ID</a> and the <a href="https://pastefy.app/G1Txv5su/raw" target="_blank" rel="noopener noreferrer">youtube Anti-Adblocker script ID</a>. If it's the same, then the uBlock team has finally updated their filters. If it's not, a fix is on the way. </p>
+            <p>Please keep in mind we are all volunteers and we do not get any revenue with it.</p>
+        
+    </div>
 </body>

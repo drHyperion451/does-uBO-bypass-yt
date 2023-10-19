@@ -1,8 +1,12 @@
 /* light mode */
+:root{
+  --padding-inline-def: 20px;
+}
 @media (prefers-color-scheme: light) {
     :root {
       --bg-color: white;
       --main-color:black;
+      --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
     }
 }
 
@@ -11,7 +15,16 @@
     :root {
       --bg-color: black;
       --main-color:white;
+      --icon-color:invert(100%) sepia(7%) saturate(0%) hue-rotate(73deg) brightness(116%) contrast(106%)
     }
+  #github-repo img{
+    filter:invert(100%)
+  }
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
 }
 
 body {
@@ -21,33 +34,67 @@ body {
   font-family: sans-serif
 }
 
+a{
+  color: var(--main-color)
+}
+
 #menubar {
   background-color: var(--bg-color);
   color: var(--main-color);
   margin: 0;
-  height: 47px;
-}
-
-#main-detector{
-  --margin-lat: 12vw;
+  height: 42px;
+  text-align: right;
   display: grid;
-  height: 159px;
-  margin-right: var(--margin-lat);
-  margin-left: var(--margin-lat);
-  padding: 0px;
+  padding-top: 7px;
+  padding-inline: var(--padding-inline-def)
+}
+#github-repo {
+  height:87%;
+}
+#github-repo img {
+  height:inherit;
+  
+}
+#main-detector{
+  --padding-lat: 12vw;
+  background-color: 0;
+  display: grid;
+  height: 257px;
+  padding-right: var(--padding-lat);
+  padding-left: var(--padding-lat);
   text-align: center;
-
+  opacity: 0%;
+  transition: opacity 1s;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+#main-detector.fade-in-main-detector{
+  opacity: 100%;
+  transition: opacity 1s;
 }
 
 #main-question{
   font-size: 29px;
+  font-weight: bold;
 }
 
 #main-answer {
   font-size: 86px;
   font-family: monospace;
+  /*! border: 3px solid; */
+  border-radius: 22px;
+  border-collapse: separate;
+  font-weight: bold;
 }
-
+.main-symbols{
+  
+  align-self: center;
+  
+}
+.main-symbols img{
+  scale: 28vw;
+  filter: var(--icon-color);
+}
 #codes-div{
   display: grid;
   grid-template-columns: auto auto;
@@ -55,20 +102,35 @@ body {
 #ublock-code-div {
   display: grid
 }
-#ublock-code-label {
-  font-size: x-large
-}
-#ublock-code {
-  font-size: xx-large
-}
 
 
 #youtube-code-div{
   display: grid
 }
-#youtube-code-label{
-  font-size:x-large;
+
+#troubleshoot-footer {
+  color: white;
+  height: 0;
+  font-weight: lighter;
 }
-#youtube-code {
-  font-size: xx-large
+
+.code-ids{
+  font-size: xx-large;
+  font-weight: lighter;
+}
+
+
+#about{
+  padding-inline: var(--padding-inline-def);
+}
+#about h1{
+  margin-top: 45px;
+  font-size: 41px;
+}
+#about p{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: lighter;
+  /*! text-indent: 24px; */
+  padding-left: 28px;
 }

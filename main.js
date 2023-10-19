@@ -34,11 +34,46 @@ async function logCodes() {
 async function areCodesEqual() {
     logCodes().then(codes => {
         if (codes.ublock == codes.youtube) {
-            document.getElementById('main-answer').innerHTML = "YES"
+            document.getElementById('main-answer').innerHTML = "YES";
+            changeBgColor('yes');
+            
         } else {
-            document.getElementById('main-answer').innerHTML = "NO"
+            document.getElementById('main-answer').innerHTML = "NO";
+            changeBgColor('no');
         }
     })
 }
-areCodesEqual()
+
+// Fancy animation section
+function changeBgColor(colorOption){
+    switch (colorOption) {
+        case 'no':
+            var lightColor = "#a30f0f";
+            var darkColor = '#610b0b';
+            break;
+        case "yes":
+            var lightColor = "#4ae054";
+            var darkColor = '#09520e';
+        default:
+            //console.log("Color applied.")
+            break;
+    }
+
+    var element = document.getElementById('main-detector');
+    var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        element.style.backgroundColor = darkColor;
+    } else {
+        element.style.backgroundColor = lightColor;
+    }
+    
+    element.classList.add("fade-in-main-detector");
+}
+
+// Main exec:
+
+window.addEventListener("load", (event) => {
+    areCodesEqual();
+  });
+  
 
