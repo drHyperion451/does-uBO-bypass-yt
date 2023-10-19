@@ -34,9 +34,9 @@ async function logCodes() {
 async function areCodesEqual() {
     logCodes().then(codes => {
         if (codes.ublock == codes.youtube) {
-            document.getElementById('main-anwer').innerHTML = "YES"
+            document.getElementById('main-answer').innerHTML = "YES"
         } else {
-            document.getElementById('main-anwer').innerHTML = "NO"
+            document.getElementById('main-answer').innerHTML = "NO"
         }
     })
 }

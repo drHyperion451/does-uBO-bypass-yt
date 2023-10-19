@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Is YouTube anti-adblock fixed yet?</title>
     <script src="./main.js"></script>
+    
 </head>
 <body>
-    <h2>Is YouTube anti-adblock fixed yet?</h2>
-    <h1 id="main-anwer">Don't know</h1>
-    <span>Ublock code: </span>
-    <span id="ublock-code">...</span>
-    <span>YT code: </span>
-    <span id="youtube-code">...</span>
+    <div id="menubar"></div>
+    <div id="main-detector">
+        <div>
+            <span id="main-question">Is YouTube anti-adblock fixed yet?</span>
+        </div>
+        <div>
+            <span id="main-answer">Not sure</span>
+        </div>
+        <div id="codes-div">
+            <div id="ublock-code-div">
+                <span id="ublock-code-label">Ublock</span>
+                <span id="ublock-code">...</span>
+            </div>
+            <div id="youtube-code-div">
+                <span id="youtube-code-label">YouTube</span>
+                <span id="youtube-code">...</span>
+            </div>
+        </div>
+    </div>
+    <div id="about"></div>
 </body>
-</html>

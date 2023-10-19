@@ -16,8 +16,59 @@
 
 body {
   background-color: var(--bg-color);
-  color: var(--main-color)
+  color: var(--main-color);
+  margin: 0;
+  font-family: sans-serif
+}
+
+#menubar {
+  background-color: var(--bg-color);
+  color: var(--main-color);
+  margin: 0;
+  height: 47px;
+}
+
+#main-detector{
+  --margin-lat: 12vw;
+  display: grid;
+  height: 159px;
+  margin-right: var(--margin-lat);
+  margin-left: var(--margin-lat);
+  padding: 0px;
+  text-align: center;
+
+}
+
+#main-question{
+  font-size: 29px;
+}
+
+#main-answer {
+  font-size: 86px;
+  font-family: monospace;
+}
+
+#codes-div{
+  display: grid;
+  grid-template-columns: auto auto;
+}
+#ublock-code-div {
+  display: grid
+}
+#ublock-code-label {
+  font-size: x-large
+}
+#ublock-code {
+  font-size: xx-large
 }
 
 
-
+#youtube-code-div{
+  display: grid
+}
+#youtube-code-label{
+  font-size:x-large;
+}
+#youtube-code {
+  font-size: xx-large
+}
