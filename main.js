@@ -45,9 +45,22 @@ async function logCodes() {
     return {ublock, youtube}
 }
 
-async function areCodesEqual() {
+async function areCodesEqual(forceOption = undefined) {
+
     // Compares both codes
     logCodes().then(codes => {
+        switch (forceOption) {
+            // Just for debug options
+            case 'yes':
+                console.log("Debug is enabled!")
+                codes.ublock, codes.youtube = 1
+                break;
+            case 'no':
+                console.log("Debug is enabled!")
+                codes.ublock = 0; codes.youtube = 1
+            default:
+                break;
+        }
         if (codes.ublock == codes.youtube) {
             // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
@@ -64,7 +77,6 @@ async function areCodesEqual() {
         }
     })
 }
-
 
 function changeBgColor(colorOption){
     // Depending on the comparison it will change the background color of the 
@@ -117,7 +129,7 @@ function newTabAnchors(classname){
 
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
-    areCodesEqual();
+    areCodesEqual(); // It should be left empty. 
   });
   
 
