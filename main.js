@@ -1,21 +1,29 @@
 
-let UBLOCK_LIST = "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
-let YT_LIST = "https://pastefy.app/G1Txv5su/raw"
+const UBLOCK_LIST = 
+"https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
+const YT_LIST = "https://pastefy.app/G1Txv5su/raw"
 
-let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+let ISDARKMODE = 
+window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
-
-async function getLastCodeUblock(codeList){
+async function fetchData(codeList){
+    //// Fetchs the ublock list file
     let response = await fetch(codeList);
-    let data = await response.text();
+    return await response.text();
+}
+async function getLastCodeUblock(){
+    let data = await fetchData(UBLOCK_LIST)
+
+    // Returns what is the latest ublock code
     let codes = data.trim().split('\n');
     let lastCode = codes[codes.length - 1];
     return lastCode;
 }
 
-async function getLastYoutubeCode(codeList){
-    let response = await fetch(codeList);
-    let data = await response.text();
+async function getLastYoutubeCode(){
+    let data = await fetchData(YT_LIST)
+
+    // Returns what is the latest youtube code
     let urls = data.trim().split('\n');
     let lastUrl = urls[urls.length - 1];
     let urlParts = lastUrl.split('/');
@@ -24,25 +32,31 @@ async function getLastYoutubeCode(codeList){
 }
 
 async function logCodes() {
-    let ublock = await getLastCodeUblock(UBLOCK_LIST);
+    // Displays each log codes to any element with 'ublock-code' id.
+    // Idea: Make this change to all elements that share a same class? Maybe
+    /// this could be interesting to make dynamic changes after
+    let ublock = await getLastCodeUblock();
     console.log("Ublock latest code: ", ublock);
     document.getElementById("ublock-code").innerHTML = ublock
     
-    let youtube = await getLastYoutubeCode(YT_LIST);
+    let youtube = await getLastYoutubeCode();
     console.log("Youtube latest code: ", youtube);
     document.getElementById("youtube-code").innerHTML = youtube
     return {ublock, youtube}
 }
 
 async function areCodesEqual() {
+    // Compares both codes
     logCodes().then(codes => {
         if (codes.ublock == codes.youtube) {
+            // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
             displayClassname('default', 'none')
             displayClassname('aa-blocked', 'block')
             
         } else {
+            // It means youtube has a new update not registered by ublock.
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
             displayClassname('default', 'none');
@@ -51,8 +65,10 @@ async function areCodesEqual() {
     })
 }
 
-// Fancy animation section
+
 function changeBgColor(colorOption){
+    // Depending on the comparison it will change the background color of the 
+    // main banner to be more fancy looking
     switch (colorOption) {
         case 'no':
             var lightColor = "#a30f0f";
@@ -64,16 +80,17 @@ function changeBgColor(colorOption){
         default:
             //console.log("Color applied.")
             break;
-    }
+    };
 
+    // Main conditional. Changes depending on dark or light mode. 
     let element = document.getElementById('main-detector');
     
-    if (isDarkMode) {
+    if (ISDARKMODE) {
         element.style.backgroundColor = darkColor;
     } else {
         element.style.backgroundColor = lightColor;
-    }
-    
+    };
+    // The fade in animatiton is handled by using CSS.
     element.classList.add("fade-in-main-detector");
 }
 
@@ -83,12 +100,23 @@ function displayClassname(classname, displayCSS){
     for (let i = 0; i < class_list.length; i++) {
         const element = class_list[i];
         element.style.display = displayCSS;
-    }
+    };
+}
 
+function newTabAnchors(classname){
+    // Automatically sets all anchors with an speciffic class to be open as
+    // newtab
+    let anchor_array = document.getElementsByClassName(classname);
+    for (let i = 0; i < anchor_array.length; i++) {
+        const element = anchor_array[i];
+        element.setAttribute('target', '_blank');
+        element.setAttribute('rel', 'noopener noreferrer')
+    };
 }
 // Main exec:
 
 window.addEventListener("load", (event) => {
+    newTabAnchors('new-tab');
     areCodesEqual();
   });
   
