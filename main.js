@@ -45,39 +45,6 @@ async function logCodes() {
     return {ublock, youtube}
 }
 
-async function areCodesEqual(forceOption = undefined) {
-
-    // Compares both codes
-    logCodes().then(codes => {
-        switch (forceOption) {
-            // Just for debug options
-            case 'yes':
-                console.log("Debug is enabled!")
-                codes.ublock, codes.youtube = 1
-                break;
-            case 'no':
-                console.log("Debug is enabled!")
-                codes.ublock = 0; codes.youtube = 1
-            default:
-                break;
-        }
-        if (codes.ublock == codes.youtube) {
-            // It means ublock is updated with the last YouTube script.
-            document.getElementById('main-answer').innerHTML = "YES";
-            changeBgColor('yes');
-            displayClassname('default', 'none')
-            displayClassname('aa-blocked', 'block')
-            
-        } else {
-            // It means youtube has a new update not registered by ublock.
-            document.getElementById('main-answer').innerHTML = "NO";
-            changeBgColor('no');
-            displayClassname('default', 'none');
-            displayClassname('not-aa-blocked', 'block')
-        }
-    })
-}
-
 function changeBgColor(colorOption){
     // Depending on the comparison it will change the background color of the 
     // main banner to be more fancy looking
@@ -113,6 +80,39 @@ function displayClassname(classname, displayCSS){
         const element = class_list[i];
         element.style.display = displayCSS;
     };
+}
+
+async function areCodesEqual(forceOption = undefined) {
+
+    // Compares both codes
+    logCodes().then(codes => {
+        switch (forceOption) {
+            // Just for debug options
+            case 'yes':
+                console.log("Debug is enabled!")
+                codes.ublock, codes.youtube = 1
+                break;
+            case 'no':
+                console.log("Debug is enabled!")
+                codes.ublock = 0; codes.youtube = 1
+            default:
+                break;
+        }
+        if (codes.ublock == codes.youtube) {
+            // It means ublock is updated with the last YouTube script.
+            document.getElementById('main-answer').innerHTML = "YES";
+            changeBgColor('yes');
+            displayClassname('default', 'none')
+            displayClassname('aa-blocked', 'block')
+            
+        } else {
+            // It means youtube has a new update not registered by ublock.
+            document.getElementById('main-answer').innerHTML = "NO";
+            changeBgColor('no');
+            displayClassname('default', 'none');
+            displayClassname('not-aa-blocked', 'block')
+        }
+    })
 }
 
 function newTabAnchors(classname){
