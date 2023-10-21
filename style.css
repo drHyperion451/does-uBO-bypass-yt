@@ -6,6 +6,7 @@
     :root {
       --bg-color: white;
       --main-color:black;
+      /* Changes all icons to white that shares this filter*/
       --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
     }
 }
@@ -15,6 +16,7 @@
     :root {
       --bg-color: black;
       --main-color:white;
+      /* Changes all icons to white that shares this filter*/
       --icon-color:invert(100%) sepia(7%) saturate(0%) hue-rotate(73deg) brightness(116%) contrast(106%)
     }
   #github-repo img{
@@ -94,18 +96,18 @@ a{
   scale: 28vw;
   filter: var(--icon-color);
 }
-#codes-div{
+#main-codes-div{
   display: grid;
   grid-template-columns: auto auto;
   column-gap: 15px;
 }
-#ublock-code-div {
-  display: grid
+.codes-div{
+  display: grid;
 }
-
-
-#youtube-code-div{
-  display: grid
+.code-ids{
+  text-decoration: none;
+  font-size: xx-large;
+  font-weight: lighter;
 }
 
 #troubleshoot-footer {
@@ -113,13 +115,6 @@ a{
   height: 0;
   font-weight: lighter;
 }
-
-.code-ids{
-  text-decoration: none;
-  font-size: xx-large;
-  font-weight: lighter;
-}
-
 
 #about{
   padding-inline: var(--padding-inline-def);
