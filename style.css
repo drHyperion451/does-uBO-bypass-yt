@@ -22,7 +22,7 @@
   }
 }
 
-@keyframes fadeIn {
+@keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
 }
@@ -64,7 +64,6 @@ a{
   padding-left: var(--padding-lat);
   text-align: center;
   opacity: 0%;
-  transition: opacity 1s;
   padding-top: 30px;
   padding-bottom: 46px;
 }
@@ -115,6 +114,7 @@ a{
 }
 
 .code-ids{
+  text-decoration: none;
   font-size: xx-large;
   font-weight: lighter;
 }
