@@ -2,6 +2,9 @@
 let UBLOCK_LIST = "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 let YT_LIST = "https://pastefy.app/G1Txv5su/raw"
 
+let isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+
 async function getLastCodeUblock(codeList){
     let response = await fetch(codeList);
     let data = await response.text();
@@ -36,14 +39,14 @@ async function areCodesEqual() {
         if (codes.ublock == codes.youtube) {
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
-            document.getElementById('about-explanation').innerHTML = "It means that uBlock Origin has blocked the Anti-Adblocker script and you can safely watch youtube without ads.";
-            document.getElementById('about-action').innerHTML = "You need to delete all cached uBlock Origin filters and update them. <b>There is a good guide made by the uBlock Origin team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/' target='_blank' rel='noopener noreferrer'>Reddit.</a></b>";
+            displayClassname('default', 'none')
+            displayClassname('aa-blocked', 'block')
             
         } else {
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
-            document.getElementById('about-explanation').innerHTML = "It means that uBlock Origin has not blocked the Anti-Adblocker script yet and it is not safe to watch youtube without detection.";
-            document.getElementById('about-action').innerHTML = "Please wait for uBlock Origin to update their filters and check back again later.";
+            displayClassname('default', 'none');
+            displayClassname('not-aa-blocked', 'block')
         }
     })
 }
@@ -63,8 +66,8 @@ function changeBgColor(colorOption){
             break;
     }
 
-    var element = document.getElementById('main-detector');
-    var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    let element = document.getElementById('main-detector');
+    
     if (isDarkMode) {
         element.style.backgroundColor = darkColor;
     } else {
@@ -74,6 +77,15 @@ function changeBgColor(colorOption){
     element.classList.add("fade-in-main-detector");
 }
 
+function displayClassname(classname, displayCSS){
+    // Changes the about section depending on classname:
+    let class_list = document.getElementsByClassName(classname);
+    for (let i = 0; i < class_list.length; i++) {
+        const element = class_list[i];
+        element.style.display = displayCSS;
+    }
+
+}
 // Main exec:
 
 window.addEventListener("load", (event) => {
