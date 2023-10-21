@@ -39,6 +39,12 @@ body {
 a{
   color: var(--main-color)
 }
+noscript{
+  text-align: center;
+}
+noscript p{
+  font-size:30px
+}
 
 #menubar {
   background-color: var(--bg-color);
@@ -127,6 +133,6 @@ a{
   font-size: 21px;
   line-height: 26px;
   font-weight: lighter;
-  /*! text-indent: 24px; */
+  text-indent: 24px;
   padding-left: 28px;
 }
