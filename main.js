@@ -36,10 +36,14 @@ async function areCodesEqual() {
         if (codes.ublock == codes.youtube) {
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
+            document.getElementById('about-explanation').innerHTML = "It means that uBlock Origin has blocked the Anti-Adblocker script and you can safely watch youtube without ads.";
+            document.getElementById('about-action').innerHTML = "You need to delete all cached uBlock Origin filters and update them. <b>There is a good guide made by the uBlock Origin team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/' target='_blank' rel='noopener noreferrer'>Reddit.</a></b>";
             
         } else {
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
+            document.getElementById('about-explanation').innerHTML = "It means that uBlock Origin has not blocked the Anti-Adblocker script yet and it is not safe to watch youtube without detection.";
+            document.getElementById('about-action').innerHTML = "Please wait for uBlock Origin to update their filters and check back again later.";
         }
     })
 }
