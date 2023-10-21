@@ -97,6 +97,7 @@ a{
 #codes-div{
   display: grid;
   grid-template-columns: auto auto;
+  column-gap: 15px;
 }
 #ublock-code-div {
   display: grid
