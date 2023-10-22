@@ -125,7 +125,7 @@ noscript p{
 #about{
   padding-inline: var(--padding-inline-def);
 }
-#about h1{
+#about h2{
   margin-top: 45px;
   font-size: 41px;
 }
