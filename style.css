@@ -67,13 +67,14 @@ noscript p{
   --padding-lat: 12vw;
   background-color: 0;
   display: grid;
-  height: 257px;
+  height: auto;
   padding-right: var(--padding-lat);
   padding-left: var(--padding-lat);
   text-align: center;
   opacity: 0%;
   padding-top: 30px;
-  padding-bottom: 46px;
+  padding-bottom: 60px;
+  
 }
 #main-detector.fade-in-main-detector{
   opacity: 100%;
