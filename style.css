@@ -124,11 +124,15 @@ noscript p{
 }
 
 #about{
-  padding-inline: var(--padding-inline-def);
+  padding-inline: 172px;
 }
 #about h2{
   margin-top: 45px;
   font-size: 41px;
+}
+#about h3{
+  margin-top: 45px;
+  font-size: 26px;
 }
 #about p{
   font-size: 21px;
