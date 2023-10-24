@@ -31,18 +31,23 @@ async function getLastYoutubeCode(){
     return lastCode;
 }
 
-async function logCodes() {
+async function logCodes(forceOption = false) {
     // Displays each log codes to any element with 'ublock-code' id.
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
-    //let ublock = await getLastCodeUblock();
-    let ublock = '045d2209'
-    console.log("Ublock latest code: ", ublock);
-    document.getElementById("ublock-code").innerHTML = ublock
-    
+
     let youtube = await getLastYoutubeCode();
     console.log("Youtube latest code: ", youtube);
     document.getElementById("youtube-code").innerHTML = youtube
+    
+    
+    let ublock = await getLastCodeUblock();
+    if (forceOption){
+        let ublock = youtube
+    };
+    console.log("Ublock latest code: ", ublock);
+    document.getElementById("ublock-code").innerHTML = ublock
+    
     return {ublock, youtube}
 }
 
@@ -83,22 +88,10 @@ function displayClassname(classname, displayCSS){
     };
 }
 
-async function areCodesEqual(forceOption = undefined) {
+async function areCodesEqual(forceOption = false) {
 
     // Compares both codes
-    logCodes().then(codes => {
-        switch (forceOption) {
-            // Just for debug options
-            case 'yes':
-                console.log("Debug is enabled!")
-                codes.ublock, codes.youtube = 1
-                break;
-            case 'no':
-                console.log("Debug is enabled!")
-                codes.ublock = 0; codes.youtube = 1
-            default:
-                break;
-        }
+    logCodes(forceOption).then(codes => {
         if (codes.ublock == codes.youtube) {
             // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
@@ -130,7 +123,7 @@ function newTabAnchors(classname){
 
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
-    areCodesEqual(); // It should be left empty. 
+    areCodesEqual(true); // It should be left empty. 
   });
   
 
