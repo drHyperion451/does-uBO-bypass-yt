@@ -35,8 +35,8 @@ async function logCodes() {
     // Displays each log codes to any element with 'ublock-code' id.
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
-    let ublock = await getLastCodeUblock();
-    ublock = '045d2209'; // Quick fix
+    //let ublock = await getLastCodeUblock();
+    let ublock = '045d2209'
     console.log("Ublock latest code: ", ublock);
     document.getElementById("ublock-code").innerHTML = ublock
     
