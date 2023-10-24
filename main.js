@@ -41,11 +41,11 @@ async function logCodes(forceOption = false) {
     document.getElementById("youtube-code").innerHTML = youtube
     
     
-    let ublock = await getLastCodeUblock();
+    var ublock = await getLastCodeUblock();
     // Even with toggleOption is enabled it will display the fetched ublock code
     console.log("Ublock fetched latest code: ", ublock); 
     if (forceOption){
-        let ublock = youtube
+        var ublock = youtube
         console.log("forceOption enabled?: ", forceOption)
     };
     document.getElementById("ublock-code").innerHTML = ublock
@@ -125,7 +125,7 @@ function newTabAnchors(classname){
 
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
-    areCodesEqual(true); // It should be left empty. 
+    areCodesEqual(false); // It should be left empty. 
   });
   
 
