@@ -46,7 +46,7 @@ async function logCodes(forceEquality = false) {
     console.log("Ublock fetched latest code: ", ublock); 
     if (forceEquality){
         var ublock = youtube
-        console.log("forceEquality enabled?: ", forceEquality)
+        console.warn("forceEquality is enabled for quick updates. Check the ublock code for changes")
     };
     document.getElementById("ublock-code").innerHTML = ublock
     
@@ -90,10 +90,22 @@ function displayClassname(classname, displayCSS){
     };
 }
 
-async function areCodesEqual(forceEquality = false) {
+async function areCodesEqual(forceEquality = false, forceOption = '') {
 
     // Compares both codes
     logCodes(forceEquality).then(codes => {
+        switch (forceOption) {
+            // Just for debug options
+            case 'yes' && 'no':
+                console.warn("Debug is enabled!")
+            case 'yes':
+                codes.ublock, codes.youtube = 1
+                break;
+            case 'no':
+                codes.ublock = 0; codes.youtube = 1
+            default:
+                break;
+        }
         if (codes.ublock == codes.youtube) {
             // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
@@ -125,8 +137,13 @@ function newTabAnchors(classname){
 
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
-    areCodesEqual(forceEquality = false); // false: Website will work as normal
+    areCodesEqual(
+        forceEquality = 0, // false: Website will work as normal
                         // true: It will force ublock to have the same id as yt
+        forceOption = '', // 'yes': It will force the page to always say yes
+                          // 'no': It will force the page to always say no
+                          // default: Disables debug option.
+    );
 
   });
   
