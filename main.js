@@ -36,7 +36,7 @@ async function logCodes() {
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
     let ublock = await getLastCodeUblock();
-    ublock = 'b926992e'; // Quick fix
+    ublock = '045d2209'; // Quick fix
     console.log("Ublock latest code: ", ublock);
     document.getElementById("ublock-code").innerHTML = ublock
     
