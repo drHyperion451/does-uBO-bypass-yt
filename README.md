@@ -9,4 +9,4 @@ It just compares the latest filter made by [ublock volunteers](https://raw.githu
 Fork the `dev` branch, make some changes and PR to the `dev` branch to avoid overloading github pages deployment.
 
 ## Donations?
-I do not accept donations. This proyect has the same philosophy as the ublock proyect. Also will have no ads.
+I do not accept donations. This project has the same philosophy as the ublock project. Also will have no ads.
