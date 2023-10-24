@@ -42,10 +42,12 @@ async function logCodes(forceOption = false) {
     
     
     let ublock = await getLastCodeUblock();
+    // Even with toggleOption is enabled it will display the fetched ublock code
+    console.log("Ublock fetched latest code: ", ublock); 
     if (forceOption){
         let ublock = youtube
+        console.log("forceOption enabled?: ", forceOption)
     };
-    console.log("Ublock latest code: ", ublock);
     document.getElementById("ublock-code").innerHTML = ublock
     
     return {ublock, youtube}
