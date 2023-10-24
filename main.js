@@ -31,7 +31,7 @@ async function getLastYoutubeCode(){
     return lastCode;
 }
 
-async function logCodes(forceOption = false) {
+async function logCodes(forceEquality = false) {
     // Displays each log codes to any element with 'ublock-code' id.
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
@@ -44,9 +44,9 @@ async function logCodes(forceOption = false) {
     var ublock = await getLastCodeUblock();
     // Even with toggleOption is enabled it will display the fetched ublock code
     console.log("Ublock fetched latest code: ", ublock); 
-    if (forceOption){
+    if (forceEquality){
         var ublock = youtube
-        console.log("forceOption enabled?: ", forceOption)
+        console.log("forceEquality enabled?: ", forceEquality)
     };
     document.getElementById("ublock-code").innerHTML = ublock
     
@@ -90,10 +90,10 @@ function displayClassname(classname, displayCSS){
     };
 }
 
-async function areCodesEqual(forceOption = false) {
+async function areCodesEqual(forceEquality = false) {
 
     // Compares both codes
-    logCodes(forceOption).then(codes => {
+    logCodes(forceEquality).then(codes => {
         if (codes.ublock == codes.youtube) {
             // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
@@ -125,7 +125,9 @@ function newTabAnchors(classname){
 
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
-    areCodesEqual(false); // It should be left empty. 
+    areCodesEqual(forceEquality = false); // false: Website will work as normal
+                        // true: It will force ublock to have the same id as yt
+
   });
   
 
