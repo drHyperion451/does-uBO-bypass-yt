@@ -1,4 +1,3 @@
-# Are youtube ADS blocked by uBlock?
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
