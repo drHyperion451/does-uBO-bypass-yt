@@ -53,6 +53,20 @@ async function logCodes(forceEquality = false) {
     return {ublock, youtube}
 }
 
+function changeShortcutIconColor(colorOption) {
+    switch (colorOption) {
+        case 'no':
+            var filename = "favicon-red.svg";
+            break;
+        case "yes":
+            var filename = "favicon-green.svg";
+    };
+    link = document.createElement('link');
+    link.rel = 'icon';
+    link.href = "assets/icons/" + filename;
+    document.head.appendChild(link);
+}
+
 function changeBgColor(colorOption){
     // Depending on the comparison it will change the background color of the 
     // main banner to be more fancy looking
@@ -110,6 +124,7 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
             // It means ublock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
+            changeShortcutIconColor('yes');
             displayClassname('default', 'none')
             displayClassname('aa-blocked', 'block')
             
@@ -117,6 +132,7 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
             // It means youtube has a new update not registered by ublock.
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
+            changeShortcutIconColor('no');
             displayClassname('default', 'none');
             displayClassname('not-aa-blocked', 'block')
         }

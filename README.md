@@ -8,7 +8,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/drHyperion451/does-uBO-bypass-yt">
-    <img src="assets/icons/favicon.svg" alt="Logo" width="80" height="80">
+    <img src="assets/icons/favicon-green.svg" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">Does uBlock bypass YouTube anti-adblocker script?</h3>
