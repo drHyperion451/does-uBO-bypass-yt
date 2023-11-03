@@ -46,23 +46,31 @@ noscript p{
   font-size:30px
 }
 
-#menubar {
+#menubar{
+  text-align: right
+}
+
+#menubar > div{
   background-color: var(--bg-color);
   color: var(--main-color);
   margin: 0;
   height: 42px;
-  text-align: right;
-  display: grid;
+  display: inline-block;
   padding-top: 7px;
-  padding-inline: var(--padding-inline-def)
+  padding-inline: var(--padding-inline-def);
 }
-#github-repo {
-  height:87%;
+#menubar a{
+  height: 87%;
+  text-decoration: none;
+  margin-right: 10px;
 }
-#github-repo img {
-  height:inherit;
-  
+
+#menubar img{
+  height: inherit;
+
+  filter: var(--icon-color);
 }
+
 #main-detector{
   --padding-lat: 12vw;
   background-color: 0;
