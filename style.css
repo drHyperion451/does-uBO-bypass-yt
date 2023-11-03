@@ -4,8 +4,8 @@
 }
 @media (prefers-color-scheme: light) {
     :root {
-      --bg-color: white;
-      --main-color:black;
+      --bg-color:rgb(34, 34, 34);
+      --main-color:rgb(228, 228, 228);
       /* Changes all icons to white that shares this filter*/
       --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
     }
@@ -14,8 +14,8 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-      --bg-color: black;
-      --main-color:white;
+      --bg-color:rgb(34, 34, 34);
+      --main-color:rgb(228, 228, 228);
       /* Changes all icons to white that shares this filter*/
       --icon-color:invert(100%) sepia(7%) saturate(0%) hue-rotate(73deg) brightness(116%) contrast(106%)
     }
@@ -33,7 +33,7 @@ body {
   background-color: var(--bg-color);
   color: var(--main-color);
   margin: 0;
-  font-family: sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -47,11 +47,15 @@ noscript p{
 }
 
 #menubar{
-  text-align: right
+  text-align: right;
+  position: fixed;
+  bottom: 10px;
+  right: 2px;
+  opacity: 70%;
 }
 
 #menubar > div{
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--main-color);
   margin: 0;
   height: 42px;
@@ -82,6 +86,8 @@ noscript p{
   opacity: 0%;
   padding-top: 30px;
   padding-bottom: 60px;
+  border-radius: 15px;
+  margin: 20px;
   
 }
 #main-detector.fade-in-main-detector{
@@ -103,9 +109,7 @@ noscript p{
   font-weight: bold;
 }
 .main-symbols{
-  
   align-self: center;
-  
 }
 .main-symbols img{
   scale: 28vw;
