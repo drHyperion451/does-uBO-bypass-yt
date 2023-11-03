@@ -104,6 +104,11 @@ function displayClassname(classname, displayCSS){
     };
 }
 
+function displayTroubleshootLink(display){
+    //shows the troubleshooter link if true, hides it if false
+    document.getElementById("troubleshoot-footer").style.display = (display ? "" : "none");
+}
+
 async function areCodesEqual(forceEquality = false, forceOption = '') {
 
     // Compares both codes
@@ -125,16 +130,17 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
             changeShortcutIconColor('yes');
-            displayClassname('default', 'none')
-            displayClassname('aa-blocked', 'block')
-            
+            displayClassname('default', 'none');
+            displayClassname('aa-blocked', 'block');
+            displayTroubleshootLink(true);
         } else {
             // It means youtube has a new update not registered by ublock.
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
             changeShortcutIconColor('no');
             displayClassname('default', 'none');
-            displayClassname('not-aa-blocked', 'block')
+            displayClassname('not-aa-blocked', 'block');
+            displayTroubleshootLink(false);
         }
     })
 }
