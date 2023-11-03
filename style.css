@@ -4,12 +4,8 @@
 }
 @media (prefers-color-scheme: light) {
     :root {
-
-      --bg-color:rgb(34, 34, 34);
-      --main-color:rgb(228, 228, 228);
-      --banner-yes:hsl(124, 71%, 58%);
-      --banner-no:hsl(0, 83%, 35%);
-
+      --bg-color:rgb(228, 228, 228);
+      --main-color:rgb(16, 16, 16);
       /* Changes all icons to white that shares this filter*/
       --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
     }
@@ -18,12 +14,8 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-
-      --bg-color:rgb(34, 34, 34);
+      --bg-color:rgb(16, 16, 16);
       --main-color:rgb(228, 228, 228);
-      --banner-yes:hsl(124, 80%, 18%);
-      --banner-no:hsl(0, 80%, 21%);
-
       /* Changes all icons to white that shares this filter*/
       --icon-color:invert(100%) sepia(7%) saturate(0%) hue-rotate(73deg) brightness(116%) contrast(106%)
     }
@@ -96,7 +88,16 @@ noscript p{
   padding-bottom: 60px;
   border-radius: 15px;
   margin: 20px;
-  
+}
+/* New CSS for mobile devices */
+@media screen and (max-width: 600px) {
+  #main-detector {
+    --padding-lat: 5vw;
+    padding-top: 15px; 
+    padding-bottom: 5px;
+    margin: 10px;
+    font-size: 10px;
+  }
 }
 #main-detector.fade-in-main-detector{
   opacity: 100%;
