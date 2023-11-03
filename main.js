@@ -71,13 +71,11 @@ function changeBgColor(colorOption){
     // Depending on the comparison it will change the background color of the 
     // main banner to be more fancy looking
     switch (colorOption) {
-        case 'no':
-            var lightColor = "#a30f0f";
-            var darkColor = '#610b0b';
+        case 'yes':
+            var bgColor = 'var(--banner-yes)';
             break;
-        case "yes":
-            var lightColor = "#4ae054";
-            var darkColor = '#09520e';
+        case "no":
+            var bgColor = "var(--banner-no)";
         default:
             //console.log("Color applied.")
             break;
@@ -86,11 +84,9 @@ function changeBgColor(colorOption){
     // Main conditional. Changes depending on dark or light mode. 
     let element = document.getElementById('main-detector');
     
-    if (ISDARKMODE) {
-        element.style.backgroundColor = darkColor;
-    } else {
-        element.style.backgroundColor = lightColor;
-    };
+
+    element.style.backgroundColor = bgColor;
+
     // The fade in animatiton is handled by using CSS.
     element.classList.add("fade-in-main-detector");
 }
