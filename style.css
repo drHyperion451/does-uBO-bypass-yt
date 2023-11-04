@@ -38,6 +38,11 @@ body {
   color: var(--main-color);
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a{
@@ -92,6 +97,7 @@ noscript p{
   padding-bottom: 60px;
   border-radius: 15px;
   margin: 20px;
+  font-family: 'Montserrat', sans-serif;
 }
 /* New CSS for mobile devices */
 @media screen and (max-width: 600px) {
@@ -111,15 +117,16 @@ noscript p{
 #main-question{
   font-size: 29px;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 
 #main-answer {
   font-size: 86px;
-  font-family: monospace;
   /*! border: 3px solid; */
   border-radius: 22px;
   border-collapse: separate;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 .main-symbols{
   align-self: center;
@@ -147,9 +154,9 @@ noscript p{
   height: 0;
   font-weight: lighter;
 }
-
 #about{
-  padding-inline: 11vw;
+  width: 85%;
+  text-align: center;
 }
 #about h2{
   margin-top: 45px;
@@ -163,6 +170,4 @@ noscript p{
   font-size: 21px;
   line-height: 26px;
   font-weight: lighter;
-  text-indent: 24px;
-  padding-left: 28px;
 }
