@@ -47,6 +47,8 @@ I personally use [Firefox Developer Edition](https://www.mozilla.org/en-US/firef
 ## Donations?
 I do not accept donations. This project has the same philosophy as the ublock project. Also will have no tracking... like web should have been since the beginning.
 
+## Other projects:
+Check out other projects at <a href="https://drhyperion451.github.io/">drhyperion451.github.io</a>! 
 <div align="center"> 
   <b>Special thanks to the uBlock Origin team for being so talented and developing the best antivirus software</b>
 </div>
