@@ -4,8 +4,8 @@
 }
 @media (prefers-color-scheme: light) {
     :root {
-      --bg-color: white;
-      --main-color:black;
+      --bg-color:rgb(228, 228, 228);
+      --main-color:rgb(16, 16, 16);
       --banner-yes:hsl(124, 71%, 58%);
       --banner-no:hsl(0, 83%, 35%);
       /* Changes all icons to white that shares this filter*/
@@ -16,8 +16,8 @@
 /* Dark mode */
 @media (prefers-color-scheme: dark) {
     :root {
-      --bg-color: black;
-      --main-color:white;
+      --bg-color:rgb(16, 16, 16);
+      --main-color:rgb(228, 228, 228);
       --banner-yes:hsl(124, 80%, 18%);
       --banner-no:hsl(0, 80%, 21%);
       /* Changes all icons to white that shares this filter*/
@@ -37,7 +37,7 @@ body {
   background-color: var(--bg-color);
   color: var(--main-color);
   margin: 0;
-  font-family: sans-serif
+  font-family: 'Montserrat', sans-serif;
 }
 
 a{
@@ -51,11 +51,15 @@ noscript p{
 }
 
 #menubar{
-  text-align: right
+  text-align: right;
+  position: fixed;
+  bottom: 10px;
+  right: 2px;
+  opacity: 70%;
 }
 
 #menubar > div{
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--main-color);
   margin: 0;
   height: 42px;
@@ -86,7 +90,18 @@ noscript p{
   opacity: 0%;
   padding-top: 30px;
   padding-bottom: 60px;
-  
+  border-radius: 15px;
+  margin: 20px;
+}
+/* New CSS for mobile devices */
+@media screen and (max-width: 600px) {
+  #main-detector {
+    --padding-lat: 5vw;
+    padding-top: 15px; 
+    padding-bottom: 5px;
+    margin: 10px;
+    font-size: 10px;
+  }
 }
 #main-detector.fade-in-main-detector{
   opacity: 100%;
@@ -107,9 +122,7 @@ noscript p{
   font-weight: bold;
 }
 .main-symbols{
-  
   align-self: center;
-  
 }
 .main-symbols img{
   scale: 28vw;
