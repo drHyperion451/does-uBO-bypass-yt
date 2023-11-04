@@ -61,10 +61,8 @@ function changeShortcutIconColor(colorOption) {
         case "yes":
             var filename = "favicon-green.svg";
     };
-    link = document.createElement('link');
-    link.rel = 'icon';
+    link = document.getElementById('favicon');
     link.href = "assets/icons/" + filename;
-    document.head.appendChild(link);
 }
 
 function changeBgColor(colorOption){
