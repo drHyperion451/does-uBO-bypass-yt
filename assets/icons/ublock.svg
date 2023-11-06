@@ -1,6 +1,42 @@
-<!-- shield-check icon by Free Icons (https://free-icons.github.io/free-icons/) -->
-<svg xmlns="http://www.w3.org/2000/svg" height="1em" fill="currentColor" viewBox="0 0 482 515">
-  <path
-    d="M 58 127 L 241 49 L 424 127 Q 433 132 433 140 Q 433 187 417 248 Q 401 308 361 366 Q 320 423 247 460 Q 241 462 235 460 Q 162 423 121 366 Q 81 308 65 248 Q 49 187 49 140 Q 49 132 58 127 L 58 127 Z M 443 83 L 254 3 Q 248 0 241 0 Q 234 0 228 3 L 39 83 Q 22 90 12 105 Q 1 120 1 140 Q 0 191 18 260 Q 36 329 83 394 Q 129 460 215 503 Q 241 515 267 503 Q 353 460 399 394 Q 446 329 464 260 Q 482 191 481 140 Q 481 120 470 105 Q 460 90 443 83 L 443 83 Z M 354 209 Q 368 192 354 175 Q 337 161 320 175 L 209 286 L 162 239 Q 145 225 128 239 Q 114 256 128 273 L 192 337 Q 209 351 226 337 L 354 209 L 354 209 Z"
-  />
-</svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- youtube icon by Free Icons (https://free-icons.github.io/free-icons/) -->
+
+<svg
+   height="1em"
+   fill="currentColor"
+   viewBox="0 0 546 384"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="ublock.svg"
+   xml:space="preserve"
+   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"><defs
+     id="defs1" /><sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:zoom="0.53450521"
+     inkscape:cx="362.01705"
+     inkscape:cy="70.158343"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg1" /><g
+     transform="matrix(11.521134,0,0,11.754995,275.95615,193.63703)"
+     id="nY12riacD3xztGqUolUR4"
+     style="display:inline">&#10;<path
+   style="opacity:1;fill:#000000;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0"
+   transform="translate(-16,-16)"
+   d="M 16,0 C 10.005,4 8.005,4 2,4 2,24.005 2,24.005 16,32 30,24.005 30,24.005 30,4 24.005,4 22.005,4 16,0 Z M 7.943,9.964 h 2.016 v 6.047 c 0,1.76 0.249,2.011 2.015,2.011 1.767,0 2.016,-0.256 2.016,-2.016 V 9.965 h 2.011 v 1.02 c 0.869,-0.661 1.932,-1.02 3.027,-1.02 2.776,0.009 5.025,2.26 5.031,5.041 -0.011,2.776 -2.26,5.025 -5.036,5.031 -1.349,-0.005 -2.641,-0.547 -3.584,-1.509 -0.615,1.025 -1.749,1.509 -3.464,1.509 -2.771,0 -4.031,-1.26 -4.031,-4.031 z m 11.078,2.015 C 17.344,11.97 15.989,13.328 16,15.006 c -0.005,1.672 1.355,3.025 3.027,3.016 1.671,0.009 3.025,-1.349 3.015,-3.027 0.011,-1.672 -1.348,-3.025 -3.02,-3.016 z"
+   stroke-linecap="round"
+   id="path1-0" />&#10;</g></svg>
