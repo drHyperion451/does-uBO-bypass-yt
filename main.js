@@ -35,7 +35,7 @@ async function getLastYoutubeCode(){
 async function checkDeployForceEquality(){
     let data = await fetchData(DEPLOY_FORCE)
 
-    // Returns what is the latest youtube code
+    // Returns true if forceEquality from deploy branch is set to 1
     return data.search("forceEquality = 1") != -1;
 }
 
