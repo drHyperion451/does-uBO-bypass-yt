@@ -2,6 +2,7 @@
 const UBLOCK_LIST = 
 "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 const YT_LIST = "https://pastefy.app/G1Txv5su/raw"
+const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/does-uBO-bypass-yt/deploy/forceEquality"
 
 let ISDARKMODE = 
 window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -31,6 +32,13 @@ async function getLastYoutubeCode(){
     return lastCode;
 }
 
+async function checkDeployForceEquality(){
+    let data = await fetchData(DEPLOY_FORCE)
+
+    // Returns true if forceEquality from deploy branch is set to 1
+    return data.search("forceEquality = 1") != -1;
+}
+
 async function logCodes(forceEquality = false) {
     // Displays each log codes to any element with 'ublock-code' id.
     // Idea: Make this change to all elements that share a same class? Maybe
@@ -39,12 +47,14 @@ async function logCodes(forceEquality = false) {
     let youtube = await getLastYoutubeCode();
     console.log("Youtube latest code: ", youtube);
     document.getElementById("youtube-code").innerHTML = youtube
-    
+
+    var deployForceEquality = await checkDeployForceEquality();
+    console.log("deployForceEquality: ", deployForceEquality);
     
     var ublock = await getLastCodeUblock();
     // Even with toggleOption is enabled it will display the fetched ublock code
     console.log("Ublock fetched latest code: ", ublock); 
-    if (forceEquality){
+    if (forceEquality || deployForceEquality){
         var ublock = youtube
         console.warn("forceEquality is enabled for quick updates. Check the ublock code for changes")
     };
