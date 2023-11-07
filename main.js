@@ -154,7 +154,7 @@ function newTabAnchors(classname){
 window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
     areCodesEqual(
-        forceEquality = 0, // false: Website will work as normal
+        forceEquality = 1, // false: Website will work as normal
                         // true: It will force ublock to have the same id as yt
         forceOption = '', // 'yes': It will force the page to always say yes
                           // 'no': It will force the page to always say no
