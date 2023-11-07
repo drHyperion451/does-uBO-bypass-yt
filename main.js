@@ -2,7 +2,7 @@
 const UBLOCK_LIST = 
 "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 const YT_LIST = "https://pastefy.app/G1Txv5su/raw"
-const DEPLOY_MAIN_JS = "https://raw.githubusercontent.com/drHyperion451/does-uBO-bypass-yt/deploy/main.js"
+const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/does-uBO-bypass-yt/deploy/forceEquality"
 
 let ISDARKMODE = 
 window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -33,7 +33,7 @@ async function getLastYoutubeCode(){
 }
 
 async function checkDeployForceEquality(){
-    let data = await fetchData(DEPLOY_MAIN_JS)
+    let data = await fetchData(DEPLOY_FORCE)
 
     // Returns what is the latest youtube code
     return data.search("forceEquality = 1") != -1;
