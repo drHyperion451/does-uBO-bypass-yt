@@ -109,10 +109,10 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
     logCodes(forceEquality).then(codes => {
         switch (forceOption) {
             // Just for debug options
-            case 'yes' && 'no':
+            case ('yes' || 'no'):
                 console.warn("Debug is enabled!")
             case 'yes':
-                codes.ublock, codes.youtube = 1
+                codes.ublock = codes.youtube = 1
                 break;
             case 'no':
                 codes.ublock = 0; codes.youtube = 1
