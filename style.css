@@ -137,8 +137,17 @@ noscript p{
 }
 #main-codes-div{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto;
   column-gap: 15px;
+}
+#last-time-updated-div{
+  /* Centered Updated since text*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#last-time-updated-div > span{
+  font-size: 120%
 }
 .codes-div{
   display: grid;
