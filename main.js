@@ -2,7 +2,7 @@
 const UBLOCK_LIST = 
 "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 const YT_LIST = "https://pastefy.app/G1Txv5su/raw"
-const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/does-uBO-bypass-yt/deploy/forceEquality"
+const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/DUBY-config/main/forceEquality"
 
 let ISDARKMODE = 
 window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
