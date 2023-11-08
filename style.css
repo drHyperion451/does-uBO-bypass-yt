@@ -94,7 +94,7 @@ noscript p{
   text-align: center;
   opacity: 0%;
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 10px;
   border-radius: 15px;
   margin: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -158,7 +158,7 @@ noscript p{
   font-weight: lighter;
 }
 
-#troubleshoot-footer {
+#banner-footer {
   color: var(--main-color);
 
   font-weight: lighter;
