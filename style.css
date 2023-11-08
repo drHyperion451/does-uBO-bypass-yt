@@ -94,7 +94,7 @@ noscript p{
   text-align: center;
   opacity: 0%;
   padding-top: 30px;
-  padding-bottom: 60px;
+  padding-bottom: 16px;
   border-radius: 15px;
   margin: 20px;
   font-family: 'Montserrat', sans-serif;
@@ -104,7 +104,7 @@ noscript p{
   #main-detector {
     --padding-lat: 5vw;
     padding-top: 15px; 
-    padding-bottom: 5px;
+    padding-bottom: 15px;
     margin: 10px;
     font-size: 10px;
   }
@@ -140,6 +140,15 @@ noscript p{
   grid-template-columns: auto auto;
   column-gap: 15px;
 }
+#last-time-updated-div{
+  /* Centered Updated since text*/
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+#last-time-updated-div > span{
+  font-size: 120%
+}
 .codes-div{
   display: grid;
 }
@@ -151,7 +160,7 @@ noscript p{
 
 #troubleshoot-footer {
   color: var(--main-color);
-  height: 0;
+
   font-weight: lighter;
 }
 #about{
