@@ -6,7 +6,7 @@
     :root {
       --bg-color:rgb(228, 228, 228);
       --main-color:rgb(16, 16, 16);
-      --banner-yes:hsl(124, 71%, 58%);
+      --banner-yes:hsl(124, 54%, 43%);
       --banner-no:hsl(0, 83%, 35%);
       /* Changes all icons to white that shares this filter*/
       --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
@@ -125,7 +125,7 @@ noscript p{
   /*! border: 3px solid; */
   border-radius: 22px;
   border-collapse: separate;
-  font-weight: bold;
+  font-weight: 1000;
   font-family: 'Montserrat', sans-serif;
 }
 .main-symbols{
