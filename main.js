@@ -12,14 +12,14 @@ let ISDARKMODE =
 window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 async function fetchData(codeList){
-    //// Fetchs the ublock list file
+    //// Fetches the uBlock list file
     let response = await fetch(codeList);
     return await response.text();
 }
 async function getLastCodeUblock(){
     let data = await fetchData(UBLOCK_LIST)
 
-    // Returns what is the latest ublock code
+    // Returns the latest uBlock code
     let codes = data.trim().split('\n');
     let lastCode = codes[codes.length - 1];
     return lastCode;
@@ -28,7 +28,7 @@ async function getLastCodeUblock(){
 async function getLastYoutubeCode(){
     let data = await fetchData(YT_LIST);
 
-    // Returns what is the latest youtube code
+    // Returns the latest YouTube code
     let urls = data.trim().split('\n');
     let lastUrl = urls[urls.length - 1];
     let urlParts = lastUrl.split('/');
@@ -56,7 +56,7 @@ async function logCodes(forceEquality = false) {
     console.log("deployForceEquality: ", deployForceEquality);
     
     var ublock = await getLastCodeUblock();
-    // Even with toggleOption is enabled it will display the fetched ublock code
+    // Even with toggleOption is enabled it will display the fetched uBlock code
     console.log("Ublock fetched latest code: ", ublock); 
     if (forceEquality || deployForceEquality){
         var ublock = youtube
@@ -99,7 +99,7 @@ function changeBgColor(colorOption){
 
     element.style.backgroundColor = bgColor;
 
-    // The fade in animatiton is handled by using CSS.
+    // The fade in animation is handled by using CSS.
     element.classList.add("fade-in-main-detector");
 }
 
@@ -134,7 +134,7 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
                 break;
         }
         if (codes.ublock == codes.youtube) {
-            // It means ublock is updated with the last YouTube script.
+            // It means uBlock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
             changeShortcutIconColor('yes');
@@ -142,7 +142,7 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
             displayClassname('aa-blocked', 'block');
             displayTroubleshootLink(true);
         } else {
-            // It means youtube has a new update not registered by ublock.
+            // It means YouTube has a new update not registered by uBlock.
             document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
             changeShortcutIconColor('no');
@@ -210,7 +210,7 @@ async function changeUpdatedDateHTML(){
     }
 }
 function newTabAnchors(classname){
-    // Automatically sets all anchors with an speciffic class to be open as
+    // Automatically sets all anchors with an specific class to be open as
     // newtab
     let anchor_array = document.getElementsByClassName(classname);
     for (let i = 0; i < anchor_array.length; i++) {
@@ -225,7 +225,7 @@ window.addEventListener("load", (event) => {
     newTabAnchors('new-tab');
     areCodesEqual(
         forceEquality = 0, // false: Website will work as normal
-                        // true: It will force ublock to have the same id as yt
+                        // true: It will force uBlock to have the same id as YT
         forceOption = '', // 'yes': It will force the page to always say yes
                           // 'no': It will force the page to always say no
                           // default: Disables debug option.
