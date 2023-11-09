@@ -11,7 +11,7 @@
     <img src="assets/icons/favicon-green.svg" alt="Logo" width="80" height="80">
   </a>
 
-<h3 align="center">Does uBlock bypass YouTube's anti-adblocker script?</h3>
+<h3 align="center">Does uBlock bypass YouTube anti-adblocker script?</h3>
 
   <p align="center">
     This website will tell you!
@@ -23,7 +23,6 @@
     <a href="https://github.com/drHyperion451/does-uBO-bypass-yt/issues">Request Feature</a>
   </p>
 </div>
-
 
 ## Table of Contents
 
@@ -44,7 +43,6 @@ The uBlock Filters Update Checker is a tool that helps users of uBlock Origin, a
 The uBlock Filters Update Checker functions by comparing the latest filter maintained by uBlock volunteers with YouTube's anti-adblock script. If the filter IDs match, it indicates that the filter is up to date. If the IDs do not match, it does not necessarily mean that uBlock is not working on YouTube. Instead, it serves as a recommendation to update your filters. The tool also advises users to report to uBlock if they still encounter ads after updating their filters.
 
 **Note:** If the IDs do not match, please refrain from making a report to uBlock to prevent overloading their issue tracker.
-
 
 ## Usage
 
@@ -93,7 +91,7 @@ Explore other projects at [drhyperion451.github.io](https://github.com/drHyperio
 ## Acknowledgments
 
 <div align="center"> 
-  <b>Special thanks to the uBlock Origin team for being so talented and developing the best antivirus software.</b>
+  <b>Special thanks to the uBlock Origin team for their exceptional talent and for developing one of the best ad-blocking tools available.</b>
 </div>
 
 [contributors-shield]: https://img.shields.io/github/contributors/drHyperion451/does-uBO-bypass-yt.svg?style=for-the-badge
