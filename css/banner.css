@@ -1,0 +1,84 @@
+/*
+BANNER.CSS
+Contains the style for the main banner (the big green/red thing).
+*/
+
+#main-detector{
+    --padding-lat: 12vw;
+    background-color: 0;
+    display: grid;
+    height: auto;
+    padding-right: var(--padding-lat);
+    padding-left: var(--padding-lat);
+    text-align: center;
+    opacity: 0%;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    border-radius: 15px;
+    margin: 20px;
+    font-family: 'Montserrat', sans-serif;
+  }
+/* New CSS for mobile devices */
+@media screen and (max-width: 600px) {
+    #main-detector {
+        --padding-lat: 5vw;
+        padding-top: 15px; 
+        padding-bottom: 15px;
+        margin: 10px;
+        font-size: 10px;
+    }
+}
+#main-detector.fade-in-main-detector{
+    opacity: 100%;
+    transition: opacity 1s;
+}
+  
+#main-question{
+    font-size: 29px;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+#main-answer {
+    font-size: 86px;
+    /*! border: 3px solid; */
+    border-radius: 22px;
+    border-collapse: separate;
+    font-weight: 1000;
+    font-family: 'Montserrat', sans-serif;
+}
+.main-symbols{
+    align-self: center;
+}
+.main-symbols img{
+    scale: 28vw;
+    filter: var(--icon-color);
+}
+#main-codes-div{
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 15px;
+}
+#last-time-updated-div{
+    /* Centered Updated since text*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#last-time-updated-div > span{
+    font-size: 120%
+}
+.codes-div{
+    display: grid;
+}
+.code-ids{
+    text-decoration: none;
+    font-size: xx-large;
+    font-weight: lighter;
+}
+  
+#banner-footer {
+    color: var(--main-color);
+  
+    font-weight: lighter;
+}

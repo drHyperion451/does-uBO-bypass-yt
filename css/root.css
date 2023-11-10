@@ -1,0 +1,78 @@
+/*
+ROOT.CSS
+Contains :root pseudoclass plus some global atribbutes to common tags.
+Any html file SHOULD use this CSS file, loaded first to all CSS files.
+*/
+
+/* light mode */
+:root{
+    --padding-inline-def: 20px;
+  }
+  @media (prefers-color-scheme: light) {
+      :root {
+        --bg-color:rgb(228, 228, 228);
+        --main-color:rgb(16, 16, 16);
+        --banner-yes:hsl(124, 54%, 43%);
+        --banner-no:hsl(0, 83%, 35%);
+        /* Changes all icons to white that shares this filter*/
+        --icon-color:invert(0%) sepia(0%) saturate(7471%) hue-rotate(122deg) brightness(101%) contrast(109%)
+      }
+  }
+  
+  /* Dark mode */
+  @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-color:rgb(16, 16, 16);
+        --main-color:rgb(228, 228, 228);
+        --banner-yes:hsl(124, 80%, 18%);
+        --banner-no:hsl(0, 80%, 21%);
+        /* Changes all icons to white that shares this filter*/
+        --icon-color:invert(100%) sepia(7%) saturate(0%) hue-rotate(73deg) brightness(116%) contrast(106%)
+      }
+    #github-repo img{
+      filter:invert(100%)
+    }
+  }
+  
+  @keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--main-color);
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  
+  a{
+    color: var(--main-color)
+  }
+  noscript{
+    text-align: center;
+  }
+  noscript p{
+    font-size:30px
+  }
+  /*If you want to add another style, 
+  please delete the button key and add
+  the auto-updater*/
+  button {
+    background-color: var(--banner-yes); /* Green */
+    border: none;
+    color: white;
+    padding: 20px 32px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 21px;
+    border-radius: 10px;
+  }
+  button:hover{
+    border-radius: 20px;
+  }
