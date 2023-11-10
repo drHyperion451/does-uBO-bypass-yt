@@ -226,7 +226,7 @@ window.addEventListener("load", (event) => {
     areCodesEqual(
         forceEquality = 0, // false: Website will work as normal
                         // true: It will force uBlock to have the same id as YT
-        forceOption = 'yes', // 'yes': It will force the page to always say yes
+        forceOption = '', // 'yes': It will force the page to always say yes
                           // 'no': It will force the page to always say no
                           // default: Disables debug option.
     );
