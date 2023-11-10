@@ -8,8 +8,7 @@ const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/DUBY-confi
 
 
 
-let ISDARKMODE = 
-window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
 
 async function fetchData(codeList){
     //// Fetches the uBlock list file
