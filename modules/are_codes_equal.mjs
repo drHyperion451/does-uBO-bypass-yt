@@ -1,3 +1,5 @@
+
+
 async function fetchData(codeList){
     //// Fetches the uBlock list file
     let response = await fetch(codeList);

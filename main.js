@@ -1,6 +1,6 @@
-import { areCodesEqual } from "./modules/code_comparison.mjs"
-import { changeUpdatedDateHTML } from "./modules/updated_since.mjs" 
-import { quickFilterButtonChange } from "./modules/update_button.mjs"
+import { areCodesEqual } from "./modules/are_codes_equal.mjs"
+import { changeUpdatedDateHTML } from "./modules/change_updated_date_html.mjs" 
+import { quickFilterButtonChange } from "./modules/quick_filter_button_change.mjs"
 
 const UBLOCK_LIST = "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 const UBLOCK_API_URL = "https://api.github.com/repos/stephenhawk8054/misc/commits?path=yt-fix.txt&page=1&per_page=1";
@@ -10,7 +10,7 @@ const DEPLOY_FORCE = "https://raw.githubusercontent.com/drHyperion451/DUBY-confi
 
 async function fetchData(codeList){
     //// Fetches the uBlock list file
-    // TODO: Remove this and the one in code_comparison.mjs
+    // TODO: Remove this and the one in are_codes_equal.mjs
     let response = await fetch(codeList);
     return await response.text();
 }
