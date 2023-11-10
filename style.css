@@ -61,14 +61,14 @@ button {
   background-color: var(--banner-yes); /* Green */
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 20px 32px;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 21px;
   border-radius: 10px;
 }
 button:hover{
-  border-radius: 50px
+  border-radius: 20px;
 }
 #menubar{
   text-align: right;
