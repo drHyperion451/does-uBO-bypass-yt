@@ -196,9 +196,14 @@ function pastTenseTime(dateiso){
     }
     return output_string
 }
-async function changeUpdatedDateHTML(){
-    // changes any element with class 'filter-update-since'
+async function fetchDateAndUpdate(){
     let dateiso = await getUpdateDate(UBLOCK_API_URL);
+    await changeUpdatedDateHTML(dateiso);
+    await quickFilterButtonChange(dateiso);
+
+}
+function changeUpdatedDateHTML(dateiso){
+    // changes any element with class 'filter-update-since'
     let past_date_str = pastTenseTime(dateiso);
 
     let filter_update_since = document.getElementsByClassName('filter-update-since');
@@ -209,6 +214,26 @@ async function changeUpdatedDateHTML(){
         element.title = new Date(dateiso).toLocaleString();
     }
 }
+
+async function quickFilterButtonChange(dateiso){
+    // Changes URL button depending on age of solution:
+    //// < 6h -> Add manual.
+    //// > 6h -> Full auto.
+    let url_auto = 'https://ublockorigin.github.io/uAssets/update-lists.html?listkeys=ublock-quick-fixes';
+    let url_manual = url_auto + '&manual=1';
+    let btn_element = document.querySelector('#update-quick-filters > button');
+    // Compares current time with updated time
+    let date = new Date(dateiso);
+    let now = new Date();
+    let secondsPast = (now.getTime() -  date.getTime()) / 1000;
+    // Main logic:
+    if (secondsPast < 3600*6){
+        btn_element.setAttribute('onclick', `window.location='${url_manual}';`);
+    } else {
+        btn_element.setAttribute('onclick', `window.location='${url_auto}';`);
+    };
+}
+
 function newTabAnchors(classname){
     // Automatically sets all anchors with an specific class to be open as
     // newtab
@@ -230,7 +255,7 @@ window.addEventListener("load", (event) => {
                           // 'no': It will force the page to always say no
                           // default: Disables debug option.
     );
-    changeUpdatedDateHTML();
+    fetchDateAndUpdate();
 
   });
   
