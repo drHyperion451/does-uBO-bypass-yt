@@ -54,7 +54,22 @@ noscript{
 noscript p{
   font-size:30px
 }
-
+/*If you want to add another style, 
+please delete the button key and add
+the auto-updater*/
+button {
+  background-color: var(--banner-yes); /* Green */
+  border: none;
+  color: white;
+  padding: 20px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 21px;
+  border-radius: 10px;
+}
+button:hover{
+  border-radius: 20px;
+}
 #menubar{
   text-align: right;
   position: fixed;
