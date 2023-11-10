@@ -1,4 +1,8 @@
+/*
+QUICK_FILTER_BUTTON_CHANGE.MJS
 
+Contains a function who changes the "Update Quick Filters" button according to the last updated time.
+*/
 async function quickFilterButtonChange(dateiso){
     // Changes URL button depending on age of solution:
     //// < 6h -> Add manual.

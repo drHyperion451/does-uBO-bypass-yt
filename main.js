@@ -1,3 +1,7 @@
+/*
+MAIN.JS
+Main javascript function.
+*/
 import { areCodesEqual } from "./modules/are_codes_equal.mjs"
 import { changeUpdatedDateHTML } from "./modules/change_updated_date_html.mjs" 
 import { quickFilterButtonChange } from "./modules/quick_filter_button_change.mjs"

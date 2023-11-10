@@ -1,4 +1,8 @@
-
+/*
+ARE_CODES_EQUAL.MJS
+Contains all functions related to compare both uBO filters and YT filters
+Makes any necessary changes under the html
+*/
 
 async function fetchData(codeList){
     //// Fetches the uBlock list file

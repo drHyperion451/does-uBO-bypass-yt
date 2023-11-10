@@ -32,7 +32,12 @@ function pastTenseTime(dateiso){
     }
     return output_string
 }
+/*
+CHANGE_UPDATED_DATE_HTML.MJS
 
+Changes the updated date inside the html
+
+*/
 function changeUpdatedDateHTML(dateiso){
     // changes any element with class 'filter-update-since'
     let past_date_str = pastTenseTime(dateiso);
