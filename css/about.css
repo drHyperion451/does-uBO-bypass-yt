@@ -1,0 +1,22 @@
+/*
+ABOUT.CSS
+Contains the style for the text body.
+*/
+
+#about{
+  width: 85%;
+  text-align: center;
+}
+#about h2{
+  margin-top: 45px;
+  font-size: 41px;
+}
+#about h3{
+  margin-top: 45px;
+  font-size: 26px;
+}
+#about p{
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: lighter;
+}
