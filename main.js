@@ -124,7 +124,7 @@ async function areCodesEqual(forceEquality = false, forceOption = '') {
         switch (forceOption) {
             // Just for debug options
             case ('yes' || 'no'):
-                console.warn("Debug is enabled!")
+                console.warn("Debug is enabled!. Please report this message in the Github Repo.")
             case 'yes':
                 codes.ublock = codes.youtube = 1
                 break;
@@ -226,7 +226,7 @@ window.addEventListener("load", (event) => {
     areCodesEqual(
         forceEquality = 0, // false: Website will work as normal
                         // true: It will force uBlock to have the same id as YT
-        forceOption = '', // 'yes': It will force the page to always say yes
+        forceOption = 'yes', // 'yes': It will force the page to always say yes
                           // 'no': It will force the page to always say no
                           // default: Disables debug option.
     );
