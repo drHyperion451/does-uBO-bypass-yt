@@ -72,7 +72,9 @@ Any html file SHOULD use this CSS file, loaded first to all CSS files.
     display: inline-block;
     font-size: 21px;
     border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
   }
   button:hover{
-    border-radius: 20px;
+    transform: scale(1.1);
+    transition: transform 0.3s ease-in-out;
   }
