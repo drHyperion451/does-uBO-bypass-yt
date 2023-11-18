@@ -8,16 +8,31 @@ function pastTenseTime(dateiso){
     // Is this the fastest method? 
     // I'm skeptic, but...https://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
 
-    if (secondsPast < 60){ // one minute
-        output_string = parseInt(secondsPast) + ' seconds ago.'
+    if (secondsPast < 60){ // less than one minute
+        let seconds = parseInt(secondsPast);
+        if (seconds == 1){
+            output_string = 'A second ago.'
+        } else {
+            output_string = seconds + ' seconds ago.'
+        };
     } else
-    if (secondsPast < 3600){ // one hour
-        output_string = parseInt(Math.round(secondsPast/60)) + ' minutes ago.'
+    if (secondsPast < 3600){ // less than one hour
+        let minutes = parseInt(Math.round(secondsPast/60));
+        if (minutes == 1){
+            output_string = 'A minute ago'
+        } else {
+            output_string = minutes + ' minutes ago.'
+        };
     } else
-    if (secondsPast <86400){ // one day
-        output_string = parseInt(Math.round(secondsPast/3600)) + ' hours ago.'
+    if (secondsPast <86400){ // less than one day
+        let hours = parseInt(Math.round(secondsPast/3600));
+        if (hours == 1){
+            output_string = 'An hour ago.'
+        } else {
+            output_string = hours + ' hours ago.'
+        };
     } else
-    if (secondsPast < 2419200){ // one month
+    if (secondsPast < 2419200){ // less than one month
         let days = Math.round(secondsPast/86400)
         if (days == 1) {
             output_string = 'A day ago.'
