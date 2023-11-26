@@ -144,7 +144,7 @@ async function areCodesEqual({url_ublock, yt_url, force_deploy_url, forceEqualit
             displayClassname('default', 'none');
             displayClassname('not-aa-blocked', 'block');
             displayTroubleshootLink(false);
-            document.getElementsByClassName('filter-update-since')[0].style.display == 'hidden';
+            document.getElementById('update-since-footer').hidden = true;
         }
     })
 }
