@@ -4,15 +4,20 @@ Contains all functions related to compare both uBO filters and YT filters
 Makes any necessary changes under the html
 */
 
+// Avoid fetching the real API while testing. SHOULD BE ALLWAYS DISABLED
+const TEST_FAKEGET = true; 
 async function fetchData(codeList){
-    //// Fetches the uBlock list file
+    //// Fetches the list file
     let response = await fetch(codeList);
     return await response.text();
 }
 
 async function getLastCodeUblock(url_ublock){
-    let data = await fetchData(url_ublock)
-
+    let data;
+    if (TEST_FAKEGET == true){
+        data = 'TESTING'
+    } else {
+    data = await fetchData(url_ublock)};
     // Returns the latest uBlock code
     let codes = data.trim().split('\n');
     let lastCode = codes[codes.length - 1];
@@ -20,7 +25,11 @@ async function getLastCodeUblock(url_ublock){
 }
 
 async function getLastYoutubeCode(yt_url){
-    let data = await fetchData(yt_url);
+    let data;
+    if (TEST_FAKEGET == true){
+        data = 'a/b/c/d/e/TESTING/f/ - 2023-11-27 05:27+00:00'
+    } else{
+    data = await fetchData(yt_url)};
 
     // Returns the latest YouTube code
     let urls = data.trim().split('\n'); 
