@@ -4,8 +4,9 @@ Contains all functions related to compare both uBO filters and YT filters
 Makes any necessary changes under the html
 */
 
-// Avoid fetching the real API while testing. SHOULD BE ALLWAYS DISABLED
+// Avoid fetching the real API while testing. SHOULD BE ALWAYS DISABLED
 const TEST_FAKEGET = true; 
+
 async function fetchData(codeList){
     //// Fetches the list file
     let response = await fetch(codeList);
