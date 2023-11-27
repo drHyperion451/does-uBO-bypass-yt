@@ -26,17 +26,16 @@ async function getLastYoutubeCode(yt_url){
     let urls = data.trim().split('\n'); 
     let lastUrl = urls[urls.length - 1];
     
-    // Example: https://www.youtube.com/s/desktop/bd3558ba/garbage - 2023-11-27 05:27+00:00
+    // Example: https://www.youtube.com/s/desktop/bd3558ba/ - 2023-11-27 05:27+00:00
     // Date is in ISO8601 format
-    let infoParts = lastUrl.split(' - ')
+    let infoParts = lastUrl.split(' - ');
 
     // Code id part
     let urlParts = infoParts[0].split('/');
     let lastCode = urlParts[5];
 
     // Date
-    //let dateYoutubeId = new Date(infoParts[1])
-    let dateYoutubeId = new Date('2023-11-27 05:27+00:00')
+    let dateYoutubeId = new Date(infoParts[1]);
     return [lastCode, dateYoutubeId];
 }
 async function checkDeployForceEquality(force_deploy_url){
