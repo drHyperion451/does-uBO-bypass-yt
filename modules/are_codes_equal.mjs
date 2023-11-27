@@ -23,11 +23,21 @@ async function getLastYoutubeCode(yt_url){
     let data = await fetchData(yt_url);
 
     // Returns the latest YouTube code
-    let urls = data.trim().split('\n');
+    let urls = data.trim().split('\n'); 
     let lastUrl = urls[urls.length - 1];
-    let urlParts = lastUrl.split('/');
+    
+    // Example: https://www.youtube.com/s/desktop/bd3558ba/garbage - 2023-11-27 05:27+00:00
+    // Date is in ISO8601 format
+    let infoParts = lastUrl.split(' - ')
+
+    // Code id part
+    let urlParts = infoParts[0].split('/');
     let lastCode = urlParts[5];
-    return lastCode;
+
+    // Date
+    //let dateYoutubeId = new Date(infoParts[1])
+    let dateYoutubeId = new Date('2023-11-27 05:27+00:00')
+    return [lastCode, dateYoutubeId];
 }
 async function checkDeployForceEquality(force_deploy_url){
     let data = await fetchData(force_deploy_url)
@@ -92,8 +102,9 @@ async function logCodes(forceEquality = false, url_ublock, yt_url, force_deploy_
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
 
-    let youtube = await getLastYoutubeCode(yt_url);
+    let [youtube, dateYT] = await getLastYoutubeCode(yt_url);
     console.log("Youtube latest code: ", youtube);
+    console.log("Youtube latest update time: ", dateYT)
     document.getElementById("youtube-code").innerHTML = youtube
 
     var deployForceEquality = await checkDeployForceEquality(force_deploy_url);
