@@ -60,13 +60,14 @@ async function getUpdateDate(url){
 
     let data_json = JSON.parse(data);
     let o_date = data_json[0].commit.author.date;
-    return o_date
+    return new Date(o_date)
 }
 
 async function fetchDateAndUpdate({ID_UBLOCK, ID_YT} = {}){
     // Updates Button and Date depending on the solution (Yes or no etc.)
+    let DATE_UBO = await getUpdateDate(UBLOCK_API_URL)
+    console.log("uBO fix update date: ", DATE_UBO);
     if (ID_UBLOCK == ID_YT){ //Yes
-        let DATE_UBO = getUpdateDate(UBLOCK_API_URL)
         await changeUpdatedDateHTML(DATE_UBO);
         await quickFilterButtonChange(DATE_UBO);
     }
@@ -101,6 +102,8 @@ async function main(){
             forceOption: '',
         });
         changeUpdatedDateHTML(DATE_YT)
+        console.log('YouTube script update: ', DATE_YT);
+
         fetchDateAndUpdate({
             ID_UBLOCK: ID_UBLOCK,
             ID_YT: ID_YT
