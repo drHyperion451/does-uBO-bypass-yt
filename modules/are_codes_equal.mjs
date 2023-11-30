@@ -118,6 +118,7 @@ async function areCodesEqual({id_ublock, id_yt, force_deploy_url, forceEquality 
             displayClassname('default', 'none');
             displayClassname('aa-blocked', 'block');
             displayTroubleshootLink(true);
+            document.getElementById('update-since-footer-p').innerHTML = 'Last Solution:'
         } else {
             // It means YouTube has a new update not registered by uBlock.
             document.getElementById('main-answer').innerHTML = "NO";
@@ -126,7 +127,7 @@ async function areCodesEqual({id_ublock, id_yt, force_deploy_url, forceEquality 
             displayClassname('default', 'none');
             displayClassname('not-aa-blocked', 'block');
             displayTroubleshootLink(false);
-            document.getElementById('update-since-footer').hidden = true;
+            document.getElementById('update-since-footer-p').innerHTML = 'YT script changed: '
         }
     })
 }

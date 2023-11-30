@@ -63,11 +63,13 @@ async function getUpdateDate(url){
     return o_date
 }
 
-async function fetchDateAndUpdate({url_api} = {}){
-    let dateiso = await getUpdateDate(url_api);
-    //await changeUpdatedDateHTML(dateiso);
-    await quickFilterButtonChange(dateiso);
-
+async function fetchDateAndUpdate({ID_UBLOCK, ID_YT} = {}){
+    // Updates Button and Date depending on the solution (Yes or no etc.)
+    if (ID_UBLOCK == ID_YT){ //Yes
+        let DATE_UBO = getUpdateDate(UBLOCK_API_URL)
+        await changeUpdatedDateHTML(DATE_UBO);
+        await quickFilterButtonChange(DATE_UBO);
+    }
 }
 function newTabAnchors(classname){
     // Automatically sets all anchors with an specific class to be open as
@@ -98,12 +100,13 @@ async function main(){
             forceEquality: 0,
             forceOption: '',
         });
-
+        changeUpdatedDateHTML(DATE_YT)
         fetchDateAndUpdate({
-            url_api: UBLOCK_API_URL
+            ID_UBLOCK: ID_UBLOCK,
+            ID_YT: ID_YT
         });
 
-        changeUpdatedDateHTML(DATE_YT)
+
     } catch (error) {
         console.error('Error fetching IDs:', error);
     }
