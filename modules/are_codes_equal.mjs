@@ -4,31 +4,15 @@ Contains all functions related to compare both uBO filters and YT filters
 Makes any necessary changes under the html
 */
 
+// Avoid fetching the real API while testing. SHOULD BE ALWAYS DISABLED
+
+
 async function fetchData(codeList){
-    //// Fetches the uBlock list file
+    //// Fetches the list file
     let response = await fetch(codeList);
     return await response.text();
 }
 
-async function getLastCodeUblock(url_ublock){
-    let data = await fetchData(url_ublock)
-
-    // Returns the latest uBlock code
-    let codes = data.trim().split('\n');
-    let lastCode = codes[codes.length - 1];
-    return lastCode;
-}
-
-async function getLastYoutubeCode(yt_url){
-    let data = await fetchData(yt_url);
-
-    // Returns the latest YouTube code
-    let urls = data.trim().split('\n');
-    let lastUrl = urls[urls.length - 1];
-    let urlParts = lastUrl.split('/');
-    let lastCode = urlParts[5];
-    return lastCode;
-}
 async function checkDeployForceEquality(force_deploy_url){
     let data = await fetchData(force_deploy_url)
 
@@ -87,47 +71,46 @@ function changeBgColor(colorOption){
 }
 
 
-async function logCodes(forceEquality = false, url_ublock, yt_url, force_deploy_url) {
+async function logCodes(forceEquality = false, id_ublock, id_yt, force_deploy_url) {
     // Displays each log codes to any element with 'ublock-code' id.
     // Idea: Make this change to all elements that share a same class? Maybe
     /// this could be interesting to make dynamic changes after
 
-    let youtube = await getLastYoutubeCode(yt_url);
-    console.log("Youtube latest code: ", youtube);
-    document.getElementById("youtube-code").innerHTML = youtube
+    console.log("Youtube latest code: ", id_yt);
+    document.getElementById("youtube-code").innerHTML = id_yt
 
     var deployForceEquality = await checkDeployForceEquality(force_deploy_url);
     console.log("deployForceEquality: ", deployForceEquality);
     
-    var ublock = await getLastCodeUblock(url_ublock);
     // Even with toggleOption is enabled it will display the fetched uBlock code
-    console.log("Ublock fetched latest code: ", ublock); 
+    console.log("Ublock fetched latest code: ", id_ublock); 
     if (forceEquality || deployForceEquality){
-        var ublock = youtube
+        var id_ublock = id_yt
         console.warn("forceEquality is enabled for quick updates. Check the ublock code for changes")
     };
-    document.getElementById("ublock-code").innerHTML = ublock
+    document.getElementById("ublock-code").innerHTML = id_ublock
     
-    return {ublock, youtube}
+    return {id_ublock, id_yt}
 }
 
-async function areCodesEqual({url_ublock, yt_url, force_deploy_url, forceEquality = false, forceOption = ''} = {}) {
+async function areCodesEqual({id_ublock, id_yt, force_deploy_url, forceEquality = false, forceOption = ''} = {}) {
 
     // Compares both codes
-    logCodes(forceEquality, url_ublock, yt_url, force_deploy_url).then(codes => {
+    logCodes(forceEquality, id_ublock, id_yt, force_deploy_url).then(codes => {
         switch (forceOption) {
             // Just for debug options
             case ('yes' || 'no'):
                 console.warn("Debug is enabled!. Please report this message in the Github Repo.")
             case 'yes':
-                codes.ublock = codes.youtube = 1
+                codes.id_ublock = codes.id_yt = 1
                 break;
             case 'no':
-                codes.ublock = 0; codes.youtube = 1
+                codes.id_ublock = 0; codes.id_yt = 1
             default:
                 break;
         }
-        if (codes.ublock == codes.youtube) {
+        // All the changes listed below.
+        if (codes.id_ublock == codes.id_yt) {
             // It means uBlock is updated with the last YouTube script.
             document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
@@ -135,6 +118,7 @@ async function areCodesEqual({url_ublock, yt_url, force_deploy_url, forceEqualit
             displayClassname('default', 'none');
             displayClassname('aa-blocked', 'block');
             displayTroubleshootLink(true);
+            document.getElementById('update-since-footer-p').innerHTML = 'Last Solution:'
         } else {
             // It means YouTube has a new update not registered by uBlock.
             document.getElementById('main-answer').innerHTML = "NO";
@@ -143,6 +127,7 @@ async function areCodesEqual({url_ublock, yt_url, force_deploy_url, forceEqualit
             displayClassname('default', 'none');
             displayClassname('not-aa-blocked', 'block');
             displayTroubleshootLink(false);
+            document.getElementById('update-since-footer-p').innerHTML = 'YT script changed: '
         }
     })
 }
