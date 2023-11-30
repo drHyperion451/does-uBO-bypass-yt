@@ -25,7 +25,7 @@ Contains the style for the main banner (the big green/red thing).
         padding-top: 15px; 
         padding-bottom: 15px;
         margin: 10px;
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 #main-detector.fade-in-main-detector{
