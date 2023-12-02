@@ -85,7 +85,7 @@ async function logCodes(forceEquality = false, id_ublock, id_yt, force_deploy_ur
     // Even with toggleOption is enabled it will display the fetched uBlock code
     console.log("Ublock fetched latest code: ", id_ublock); 
     if (forceEquality || deployForceEquality){
-        var id_ublock = id_yt
+        id_ublock = id_yt
         console.warn("forceEquality is enabled for quick updates. Check the ublock code for changes")
     };
     document.getElementById("ublock-code").innerHTML = id_ublock
