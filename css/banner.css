@@ -87,6 +87,9 @@ Contains the style for the main banner (the big green/red thing).
     grid-template-columns: auto auto;
     gap: 11px;
 }
+#update-since-footer > p{
+    margin-top: 0;
+}
 
 #update-since-footer-p {
     text-align: right;
