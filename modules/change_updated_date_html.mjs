@@ -54,10 +54,10 @@ Changes the updated date inside the html
 
 */
 function changeUpdatedDateHTML(dateiso){
-    // changes any element with class 'filter-update-since'
+    // changes any element with class 'updated-since-time'
     let past_date_str = pastTenseTime(dateiso);
 
-    let filter_update_since = document.getElementsByClassName('filter-update-since');
+    let filter_update_since = document.getElementsByClassName('updated-since-time');
     for (let i = 0; i < filter_update_since.length; i++) {
         const element = filter_update_since[i];
         element.innerHTML = past_date_str

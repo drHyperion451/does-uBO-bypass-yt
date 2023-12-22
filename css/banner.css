@@ -25,7 +25,7 @@ Contains the style for the main banner (the big green/red thing).
         padding-top: 15px; 
         padding-bottom: 15px;
         margin: 10px;
-        font-size: 10px;
+        font-size: 16px;
     }
 }
 #main-detector.fade-in-main-detector{
@@ -79,6 +79,23 @@ Contains the style for the main banner (the big green/red thing).
   
 #banner-footer {
     color: var(--main-color);
-  
     font-weight: lighter;
 }
+
+#update-since-footer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 11px;
+}
+#update-since-footer > p{
+    margin-top: 0;
+}
+
+#update-since-footer-p {
+    text-align: right;
+}
+
+#update-since-footer > .updated-since-time {
+    text-align: left;
+}
+

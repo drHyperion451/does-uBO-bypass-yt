@@ -15,8 +15,10 @@ async function quickFilterButtonChange(dateiso){
     let date = new Date(dateiso);
     let now = new Date();
     let secondsPast = (now.getTime() -  date.getTime()) / 1000;
+
+
     // Main logic. Looks illegal to see concat if-else but this is the js way instead of switch.:
-    if (secondsPast < 60*10){ // 10 min
+    if (secondsPast < 60*10 || secondsPast > 3600*14){ // 10 min or 14h
         div_btn_element.setAttribute('style', 'display:none;');
     }
     if (secondsPast < 3600*6){ // 6h

@@ -53,7 +53,9 @@
         </div>
         <div id="banner-footer">
             <p id="troubleshoot-footer">Still having the annoying popup? See <a href="https://www.reddit.com/r/uBlockOrigin/" class='new-tab'>r/uBlockOrigin</a></p>
-            <p>Last updated: <span class="filter-update-since"></span></p><!--This is a placeholder-->
+            <div id="update-since-footer">
+                <p id="update-since-footer-p">Latest solution:  </p><p class="updated-since-time"></p>
+            </div>
         </div> 
     </div>
     <div id="about">
@@ -69,12 +71,12 @@
         <h2>What should I do now?</h2>
         <p class="default about-action">Please come back later.</p>
                 <p class="aa-blocked about-action" style='display:none'>You might need to force an update of the "uBlock filters - Quick fixes" list in uBlock Origin and remove potential conflicts caused by other extensions or different external causes to the detection. Logging out and clearing YouTube and Google cookies, closing YT tabs and restarting your browser is helpful too.<br><br>
-                There is <b>a good guide</b> made by the uBO team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class="new-tab">Reddit</a>. <b>Make sure to read and follow it.<br><br>
-                Please DO NOT spam click the link updater.</b><br><br>
-                If the update itself <b>didn't fix the problem</b> on your side, it means <b><i>something else causes it</i></b> - likely another extension or your custom config.<br>
-                Trying to update it endlessly won't change a thing. Thus, really make sure you've read and followed the reddit mega thread.</p>
+                There is <b>a good guide</b> made by the uBO team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class="new-tab">Reddit</a>. <b>Make sure to read and follow it.</b></p>        
         <!--Button to auto-update quick filters.-->
         <div class="aa-blocked" id="update-quick-filters" style="display: none;">
+                <p class="aa-blocked about-action" style='display:none'>If the update itself <b>didn't fix the problem</b> on your side, it means <b><i>something else causes it</i></b> - likely another extension or your custom config.<br>
+                Trying to update it endlessly won't change a thing. Thus, really make sure you've read and followed the reddit mega thread.<br><br>
+                <b style="color: crimson;">Please DO NOT spam click the link updater.</b></p>
             <button type="button" title="Update quick fix filters in uBlock Origin." onclick="window.location='https://ublockorigin.github.io/uAssets/update-lists.html?listkeys=ublock-quick-fixes';">Update uBO Quick Fixes</button>
         </div>
         <p class="not-aa-blocked about-action" style='display:none'>It is recommended to wait for uBlock Origin to update their filters and come back later.</p>
