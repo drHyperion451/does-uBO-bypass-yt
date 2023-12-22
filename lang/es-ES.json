@@ -1,0 +1,25 @@
+{
+    "html-title": "¿Bypass uBlock Origin (uBO) actualmente la detección de bloqueo de anuncios en YouTube?",
+    "main-question": "¿uBlock Origin (uBO) evade el último script anti-bloqueo de anuncios de YouTube?",
+    "troubleshoot-footer": "¿Sigues teniendo la molesta ventana emergente? Consulta <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin</a>",
+    "update-since": "Última solución: ",
+
+    "h2-1": "¿Qué significa esto?",
+    "h2-1-default": "Actualmente estamos evaluando si los filtros de uBlock Origin se han actualizado para lidiar con el último script anti-bloqueo de anuncios. Este sitio web no verifica tu dispositivo. Simplemente compara archivos de texto proporcionados por el equipo de uBO para informarte sobre el estado actual de las soluciones de uBO para YouTube.",
+    "h2-1-yes": "Significa que los filtros de uBO pueden evadir el script anti-bloqueo de anuncios, y puedes ver YouTube sin anuncios de forma segura.",
+    "h2-1-no": "Significa que los filtros de uBO aún no se han actualizado para evadir el último script anti-bloqueo de anuncios de YouTube, por lo que podrías ser detectado nuevamente.",
+    "h3-1": "¿Esto significa que uBlock Origin no funciona en YouTube en absoluto?",
+    "h3-1-1": "Un ID diferente no siempre implica que se producirá la detección.",
+    "h3-1-2": "uBlock Origin aún podría funcionar en YouTube. No todas las actualizaciones de YT están dirigidas contra las soluciones de uBO.",
+    "h2-2": "¿Qué debo hacer ahora?",
+    "h2-2-default": "Por favor, vuelve más tarde.",
+    "h2-2-yes": "Es posible que necesites forzar una actualización de la lista 'uBlock filters - Quick fixes' en uBlock Origin y eliminar conflictos potenciales causados por otras extensiones u otras causas externas para la detección. Cerrar la sesión y borrar las cookies de YouTube y Google, cerrar las pestañas de YT y reiniciar tu navegador también es útil. Hay <b>una buena guía</b> creada por el propio equipo de uBO en <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddit</a>. <b>Asegúrate de leerla y seguirla.</b>",
+    "h2-2-recommends": "Si la actualización en sí misma <b>no solucionó el problema</b> en tu caso, significa que <b><i>algo más lo está causando</i></b> - probablemente otra extensión o tu configuración personalizada. Intentar actualizarlo sin cesar no cambiará nada. Por lo tanto, asegúrate realmente de haber leído y seguido el hilo mega de Reddit. <br><br><b class='translatable' data-translate='h2-2-donotspam' style='color: crimson;'>Por favor, NO hagas clic en el enlace de actualización de manera compulsiva.</b>",
+    "update-button": "Actualizar uBO Quick Fixes",
+    "h2-2-no": "Se recomienda esperar a que uBlock Origin actualice sus filtros y volver más tarde.",
+    "h2-3": "¿Qué hace este sitio web?",
+    "h2-3-1": "Simplemente obtiene la información del último <a href='https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt' class='new-tab'>ID de script de YT resuelto por uBlock Origin</a> y lo compara con el último <a href='https://pastefy.app/G1Txv5su/raw' class='new-tab'>ID de script anti-bloqueo de anuncios de YouTube</a>. Si son iguales, el equipo de uBlock Origin finalmente ha actualizado sus filtros. Si no lo son, una solución está en camino. Este sitio web no verifica si tu versión de uBlock Origin está actualizada.",
+    "h2-4": "¿Cómo puedo contribuir a este sitio web?",
+    "h2-4-1": "Puedes realizar cambios y enviar solicitudes de extracción al <a href='https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev' style='text-decoration: none;'><code>dev</code></a> branch.",
+    "h2-4-2": "Ten en cuenta que todos somos voluntarios. No obtenemos ingresos por esto y no podemos estar en línea las 24 horas. ¡Gracias por entenderlo!"
+}

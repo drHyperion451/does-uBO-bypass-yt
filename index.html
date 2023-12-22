@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/banner.css">
     <link rel="stylesheet" href="./css/about.css">
     
-    <title>Does uBlock Origin (uBO) currently bypass YouTube's adblock detection?</title>
+    <title class="translatable" data-translate="html-title">Does uBlock Origin (uBO) currently bypass YouTube's adblock detection?</title>
     <link rel="preconnect" href="https://api.fonts.coollabs.io" crossorigin />
     <link rel="shortcut icon" href="./assets/icons/favicon.svg" type="image/x-icon" id="favicon">
     <link href="https://api.fonts.coollabs.io/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -33,7 +33,7 @@
     </div>
     <noscript><p>Please Enable JavaScript to make this website work.</p></noscript>
     <div id="main-detector">
-        <div><span id="main-question">Does uBlock Origin (uBO) bypass the latest YouTube anti-adblock script?</span></div>
+        <div><span id="main-question" class="translatable" data-translate="main-question">Does uBlock Origin (uBO) bypass the latest YouTube anti-adblock script?</span></div>
         <div>
             <span id="main-answer">Not sure</span>
         </div>
@@ -54,41 +54,41 @@
             </div>
         </div>
         <div id="banner-footer">
-            <p id="troubleshoot-footer">Still having the annoying popup? See <a href="https://www.reddit.com/r/uBlockOrigin/" class='new-tab'>r/uBlockOrigin</a></p>
+            <p id="troubleshoot-footer" class="translatable" data-translate="troubleshoot-footer">Still having the annoying popup? See <a href="https://www.reddit.com/r/uBlockOrigin/" class='new-tab'>r/uBlockOrigin</a></p>
             <div id="update-since-footer">
-                <p id="update-since-footer-p">Latest solution:  </p><p class="updated-since-time"></p>
+                <p id="update-since-footer-p" class="not-translatable" data-translate="update-since">Latest solution:  </p><p class="updated-since-time"></p>
             </div>
         </div> 
     </div>
     <div id="about">
         <!-- class ="aa-blocked" -> Activated when the website response is 'yes'-->
         <!-- class ="not-aa-blocked" -> Activated when the website response is 'no'-->
-        <h2>What does it mean?</h2>
-        <p class="default about-explanation">We are currently evaluating if uBlock Origin's filters have been updated to deal with the latest Anti-Adblocker script. This website doesn't check your device. It simply compares text files provided by the uBO team to let you know the current status of uBO's solutions for YouTube.</p>
-        <p class="aa-blocked about-explanation" style='display:none'>It means that uBO's filters can bypass the Anti-Adblocker script and you can safely watch YouTube without ads.</p>
-        <p class="not-aa-blocked" style='display:none'>It means that uBO's filters have not yet been updated to bypass the latest YouTube Anti-Adblocker script, so you might be getting detected again.</p>
-            <h3 class="not-aa-blocked" style="display:none">Does this mean that uBlock Origin is not working on YouTube at all?</h3>
-            <p class="not-aa-blocked" style="display: none;"> <b style="color: crimson;">A different ID doesn't always mean the detection will occur.</b></p>
-            <p class="not-aa-blocked" style="display:none">uBlock Origin could still work on YouTube. Not all YT updates are targeted against uBO's solutions.</p>
-        <h2>What should I do now?</h2>
-        <p class="default about-action">Please come back later.</p>
-                <p class="aa-blocked about-action" style='display:none'>You might need to force an update of the "uBlock filters - Quick fixes" list in uBlock Origin and remove potential conflicts caused by other extensions or different external causes to the detection. Logging out and clearing YouTube and Google cookies, closing YT tabs and restarting your browser is helpful too.<br><br>
-                There is <b>a good guide</b> made by the uBO team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class="new-tab">Reddit</a>. <b>Make sure to read and follow it.</b></p>        
+        <h2 class="translatable" data-translate="h2-1">What does it mean?</h2>
+        <p class="default about-explanation translatable" data-translate="h2-1-default">We are currently evaluating if uBlock Origin's filters have been updated to deal with the latest Anti-Adblocker script. This website doesn't check your device. It simply compares text files provided by the uBO team to let you know the current status of uBO's solutions for YouTube.</p>
+        <p class="aa-blocked about-explanation translatable" data-translate="h2-1-yes" style='display:none'>It means that uBO's filters can bypass the Anti-Adblocker script and you can safely watch YouTube without ads.</p>
+        <p class="not-aa-blocked translatable" data-translate="h2-1-no" style='display:none'>It means that uBO's filters have not yet been updated to bypass the latest YouTube Anti-Adblocker script, so you might be getting detected again.</p>
+            <h3 class="not-aa-blocked translatable" data-translate="h3-1" style="display:none">Does this mean that uBlock Origin is not working on YouTube at all?</h3>
+            <p class="not-aa-blocked translatable" data-translate="h3-1-1" style="display: none; font-weight: bold; color: crimson;"> A different ID doesn't always mean the detection will occur.</p>
+            <p class="not-aa-blocked translatable" data-translate="h3-1-2"style="display:none">uBlock Origin could still work on YouTube. Not all YT updates are targeted against uBO's solutions.</p>
+        <h2 class="translatable" data-translate="h2-2">What should I do now?</h2>
+        <p class="default about-action translatable" data-translate="h2-2-default">Please come back later.</p>
+        <p class="aa-blocked about-action translatable" data-translate="h2-2-yes" style='display:none'>You might need to force an update of the "uBlock filters - Quick fixes" list in uBlock Origin and remove potential conflicts caused by other extensions or different external causes to the detection. Logging out and clearing YouTube and Google cookies, closing YT tabs and restarting your browser is helpful too.<br><br>
+        There is <b>a good guide</b> made by the uBO team themselves on <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class="new-tab">Reddit</a>. <b>Make sure to read and follow it.</b></p>        
         <!--Button to auto-update quick filters.-->
         <div class="aa-blocked" id="update-quick-filters" style="display: none;">
-                <p class="aa-blocked about-action" style='display:none'>If the update itself <b>didn't fix the problem</b> on your side, it means <b><i>something else causes it</i></b> - likely another extension or your custom config.<br>
+                <p class="aa-blocked about-action translatable" data-translate="h2-2-recommends" style='display:none'>If the update itself <b>didn't fix the problem</b> on your side, it means <b><i>something else causes it</i></b> - likely another extension or your custom config.<br>
                 Trying to update it endlessly won't change a thing. Thus, really make sure you've read and followed the reddit mega thread.<br><br>
-                <b style="color: crimson;">Please DO NOT spam click the link updater.</b></p>
-            <button type="button" title="Update quick fix filters in uBlock Origin." onclick="window.location='https://ublockorigin.github.io/uAssets/update-lists.html?listkeys=ublock-quick-fixes';">Update uBO Quick Fixes</button>
+                <b class="translatable" data-translate="h2-2-donotspam" style="color: crimson;">Please DO NOT spam click the link updater.</b></p>
+            <button type="button" title="Update quick fix filters in uBlock Origin." onclick="window.location='https://ublockorigin.github.io/uAssets/update-lists.html?listkeys=ublock-quick-fixes';" class="translatable" data-translate="update-button">Update uBO Quick Fixes</button>
         </div>
-        <p class="not-aa-blocked about-action" style='display:none'>It is recommended to wait for uBlock Origin to update their filters and come back later.</p>
+        <p class="not-aa-blocked about-action translatable" data-translate="h2-2-no" style='display:none'>It is recommended to wait for uBlock Origin to update their filters and come back later.</p>
 
-        <h2>What does this website do?</h2>
-        <p>It simply gets the info of the latest <a href="https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt" class='new-tab'>YT script ID solved by uBlock Origin</a> and compares it against the latest <a href="https://pastefy.app/G1Txv5su/raw" class='new-tab'>YouTube Anti-Adblocker script ID</a>.
+        <h2 class="translatable" data-translate="h2-3">What does this website do?</h2>
+        <p class="translatable" data-translate="h2-3-1">It simply gets the info of the latest <a href='https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt' class='new-tab'>YT script ID solved by uBlock Origin</a> and compares it against the latest <a href='https://pastefy.app/G1Txv5su/raw' class='new-tab'>YouTube Anti-Adblocker script ID</a>.
             If it's the same, then the uBlock Origin team has finally updated their filters. If it's not, a fix is on the way. This website does not check if your own uBlock Origin version is up-to-date.</p>
 
-        <h2>How can I contribute to this website?</h2>
-        <p>You can make changes and pull request to the <a href="https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev" style="text-decoration: none;"><code>dev</code></a> branch.</p>
-        <p>Please keep in mind we are all volunteers. We don't get any revenue from this and we cannot be online 24/7. Thanks for understanding!</p>
+        <h2 class="translatable" data-translate="h2-4">How can I contribute to this website?</h2>
+        <p class="translatable" data-translate="h2-4-1">You can make changes and pull request to the <a href="https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev" style="text-decoration: none;"><code>dev</code></a> branch.</p>
+        <p class="translatable" data-translate="h2-4-2">Please keep in mind we are all volunteers. We don't get any revenue from this and we cannot be online 24/7. Thanks for understanding!</p>
     </div>
 </body>
