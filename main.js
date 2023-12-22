@@ -5,6 +5,7 @@ Main javascript function.
 import { areCodesEqual } from "./modules/are_codes_equal.mjs"
 import { changeUpdatedDateHTML } from "./modules/change_updated_date_html.mjs" 
 import { quickFilterButtonChange } from "./modules/quick_filter_button_change.mjs"
+import { getLanguage } from "./modules/languaje.mjs"
 
 const UBLOCK_LIST = "https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt"
 const UBLOCK_API_URL = "https://api.github.com/repos/stephenhawk8054/misc/commits?path=yt-fix.txt&page=1&per_page=1";
@@ -116,6 +117,7 @@ async function main(){
 }
 
 window.addEventListener("load", (event) => {
+    getLanguage();
     main();
   });
   
