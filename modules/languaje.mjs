@@ -17,11 +17,12 @@ function getLanguage(){
     const url_params = new URLSearchParams(window.location.search);
     const lang_param = url_params.get('lang') ?? 'en-EN'; // Default is English.
     
-    console.log("Querried language is: ", lang_param)
-    console.log("AVALIABLE: ", avaliable_lang_reg)
+    console.log("Querried language is: ", lang_param);
+    console.log("AVALIABLE: ", avaliable_lang_reg);
 
-    setLanguage(lang_param)
-
+    if (lang_param != 'en_EN'){
+        setLanguage(lang_param)
+    }
 }
 
 function setLanguage(lang) {
@@ -31,7 +32,7 @@ function setLanguage(lang) {
     loadJsonFile(language_file)
         .then(trans_data => {
             // Thinking about what the fuck I'm gonna write here.
-            console.log(trans_data)
+            console.log(trans_data);
 
             const translatable_elements = document.querySelectorAll('.translatable')
             translatable_elements.forEach(element => {
