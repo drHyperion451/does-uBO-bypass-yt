@@ -112,22 +112,18 @@ async function areCodesEqual({id_ublock, id_yt, force_deploy_url, forceEquality 
         // All the changes listed below.
         if (codes.id_ublock == codes.id_yt) {
             // It means uBlock is updated to the latest YouTube script.
-            document.getElementById('main-answer').innerHTML = "YES";
             changeBgColor('yes');
             changeShortcutIconColor('yes');
             displayClassname('default', 'none');
             displayClassname('aa-blocked', 'block');
             displayTroubleshootLink(true);
-            document.getElementById('update-since-footer-p').innerHTML = 'Latest Solution: '
         } else {
             // It means YouTube has a new update not registered by uBlock.
-            document.getElementById('main-answer').innerHTML = "NO";
             changeBgColor('no');
             changeShortcutIconColor('no');
             displayClassname('default', 'none');
             displayClassname('not-aa-blocked', 'block');
             displayTroubleshootLink(false);
-            document.getElementById('update-since-footer-p').innerHTML = 'YT script changed: '
         }
     })
 }
