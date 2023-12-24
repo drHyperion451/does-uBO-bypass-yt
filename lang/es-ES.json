@@ -1,9 +1,13 @@
 {
     "html-title":"¿uBlock Origin (uBO) es capaz de bloquear anuncios en YouTube?",
     "main-question": "Puede uBlock Origin (uBO) saltarse el último script anti-adblock de YouTube?",
+    "answer-default": "Ni idea",
+    "answer-yes": "SÍ",
+    "answer-no": "NO",
 
     "troubleshoot-footer": "¿Sigues teniendo la molesta ventana emergente? Consulte <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin",
-    "update-since": "Última actualización:  ",
+    "update-since-yes": "Última actualización del parche:  ",
+    "update-since-no": "Última actualización de YT:  ",
 
     "h2-1": "Qué es esto?",
     "h2-1-default": "Ahora mismo estamos evaluando si los filtros de uBlock Origin se han actualizado para hacer frente al último script Anti-Adblocker. Este sitio web no analiza tu dispositivo. Simplemente compara bases de datos proporcionados por el equipo de uBO para informarte del estado actual de los filtros de uBO para YouTube.",
@@ -16,7 +20,7 @@
 
     "h2-2": "¿Qué debería hacer ahora?",
     "h2-2-default": "Por favor, inténtelo de nuevo más tarde",
-    "h2-2-yes": "A lo mejor necesitas forzar una actualización de los filtros 'Quick fixes' de uBlock Origin y eliminar cualquier conflicto provocado por otra extensión o ver qué está causando la detección. Cerrar sesión, limpiar las cookies de YouTube y Google, cerrando las pestañas de YT y reiniciando tu navegador podría ayudarte. <br><br>Hay <b>una guía<br> hecha por el propio equipo de uBO en <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddit</a>. <b>No olvide echar un vistazo. </b>",
+    "h2-2-yes": "A lo mejor necesitas forzar una actualización de los filtros 'Quick fixes' de uBlock Origin y eliminar cualquier conflicto provocado por otra extensión o ver qué está causando la detección. Cerrar sesión, limpiar las cookies de YouTube y Google, cerrando las pestañas de YT y reiniciando tu navegador podría ayudarte. <br><br>Existe <b>una guía<b> hecha por el propio equipo de uBO en <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddit</a>. <b>No olvide echar un vistazo. </b>",
     "h2-2-recommends": "Si la actualización <b>no ha sido útil</b>, significa que <b><i>algo ajeno a uBO es causa del problema </i></b> - por lo general otra extensión o alguna configuración personal. <br> Actualizar de manera insistente no hará nada, por lo que asegúrate que has entendido la publicación ",
     "h2-2-donotspam": "Por favor, no satures el link",
     "update-button": "Actualizar uBO 'Quick Fixes'",

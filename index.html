@@ -35,7 +35,9 @@
     <div id="main-detector">
         <div><span id="main-question" class="translatable" data-translate="main-question">Does uBlock Origin (uBO) bypass the latest YouTube anti-adblock script?</span></div>
         <div>
-            <span id="main-answer">Not sure</span>
+            <span id="main-answer" class="default translatable" data-translate="answer-default">Not sure</span>
+            <span id="main-answer" class="aa-blocked translatable" style="display: none;" data-translate="answer-yes">YES</span>
+            <span id="main-answer" class="not-aa-blocked translatable" style="display: none;" data-translate="answer-no">NO</span>
         </div>
         <div id="main-codes-div">
             <div id="ublock-code-div" class="codes-div">
@@ -56,7 +58,10 @@
         <div id="banner-footer">
             <p id="troubleshoot-footer" class="translatable" data-translate="troubleshoot-footer">Still having the annoying popup? See <a href="https://www.reddit.com/r/uBlockOrigin/" class='new-tab'>r/uBlockOrigin</a></p>
             <div id="update-since-footer">
-                <p id="update-since-footer-p" class="not-translatable" data-translate="update-since">Latest solution:  </p><p class="updated-since-time"></p>
+                <p id="update-since-footer-p" class="translatable aa-blocked" data-translate="update-since-yes" style="display: none;">Latest solution:  </p>
+                <p id="update-since-footer-p" class="translatable not-aa-blocked" data-translate="update-since-no" style="display: none;">YT script changed:  </p>
+                <p class="updated-since-time"></p>
+                
             </div>
         </div> 
     </div>
