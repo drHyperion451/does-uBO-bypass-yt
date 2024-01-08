@@ -28,6 +28,10 @@ function getLanguage(){
 function setLanguage(lang) {
     // Implement logic to set the language as needed
     console.log('Language:', lang);
+    
+    // Update the lang attribute of the HTML tag for web accessability
+    document.documentElement.lang = lang.split('-')[0]; // Sets lang attribute to the first part of the IANA code
+    
     let language_file = './lang/' + lang + '.json'
     loadJsonFile(language_file)
         .then(trans_data => {
