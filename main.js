@@ -116,9 +116,17 @@ async function main(){
     }
 }
 
+function setupEvents(){
+    // Language switch
+    document.querySelector("#globe").addEventListener("click", ({target: el}) => 
+        el.parentElement.querySelector("#languages").classList.toggle("hidden")
+    )
+}
+
 window.addEventListener("load", (event) => {
     getLanguage();
     main();
+    setupEvents();
   });
   
 
