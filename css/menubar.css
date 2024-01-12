@@ -39,11 +39,13 @@ Contains the style for the floating, bottom right, menubar.
   #globe {cursor: pointer;}
   #languages.hidden {
     opacity: 0;
+    pointer-events:none
   }
   #languages {
     transition: opacity 0.2s ease-in-out;
     display: inline-grid;
     position: absolute;
+    pointer-events:all;
     left: 21px;
     bottom: 41px;
   }
