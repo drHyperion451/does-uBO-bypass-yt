@@ -26,7 +26,7 @@ Contains the style for the floating, bottom right, menubar.
     margin-right: 10px;
   }
   .language-switch-img {
-    filter: none !important;
+    /*filter: none !important;*/
     height: 100% !important;
     width: 40px;
     display: block;
@@ -51,7 +51,8 @@ Contains the style for the floating, bottom right, menubar.
   }
   #menubar img{
     height: inherit;
+  }
+  .icon-darkmode-enabled{
+    /* Only changes the icons that has this class*/
     filter: var(--icon-color);
   }
-  
-  
