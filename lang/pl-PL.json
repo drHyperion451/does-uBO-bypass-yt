@@ -1,0 +1,35 @@
+{
+    "html-title":"Czy uBlock Origin (uBO) aktualnie blokuje detekcję adblocka w YouTube?",
+    "main-question": "Czy uBlock Origin (uBO) blokuje najnowszy skrypt anty-adblocka w YouTube?",
+    "answer-default": "Nie wiadomo",
+    "answer-yes": "TAK",
+    "answer-no": "NIE",
+
+    "troubleshoot-footer": "Pokazuje ci się irytujący popup? Sprawdź <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin",
+    "update-since-yes": "Najnowsze rozwiązanie:  ",
+    "update-since-no": "Skrypt adblocka zmieniony:  ",
+
+    "h2-1": "Co to znaczy?",
+    "h2-1-default": "Obecnie sprawdzamy, czy filtry uBlock Origin zostały zaktualizowane, aby poradzić sobie z najnowszym skryptem Anti-Adblocker. Ta strona nie sprawdza urządzenia użytkownika. Po prostu porównuje pliki tekstowe dostarczone przez zespół uBO, aby poinformować o aktualnym stanie rozwiązań uBO dla YouTube.",
+    "h2-1-yes": "Oznacza to, że filtry uBO mogą ominąć skrypt Anti-Adblocker i można bezpiecznie oglądać YouTube bez reklam.",
+    "h2-1-no": "Oznacza to, że filtry uBO nie zostały jeszcze zaktualizowane, aby ominąć najnowszy skrypt YouTube Anti-Adblocker, więc możesz zostać ponownie wykryty.",
+
+    "h3-1": "Czy to oznacza, że uBlock Origin w ogóle nie działa na YouTube?",
+    "h3-1-1": "Inne ID nie zawsze oznacza, że nastąpi wykrycie.",
+    "h3-1-2": "uBlock Origin może nadal działać na YouTube. Nie wszystkie aktualizacje YT są skierowane przeciwko rozwiązaniom uBO.",
+
+    "h2-2": "Co powinienem teraz zrobić?",
+    "h2-2-default": "Zajrzyj później.",
+    "h2-2-yes": "Konieczne może być wymuszenie aktualizacji listy \"Filtry uBlock - Szybkie poprawki\" w uBlock Origin i usunięcie potencjalnych konfliktów spowodowanych przez inne rozszerzenia lub inne zewnętrzne przyczyny wykrywania. Pomocne jest również wylogowanie się i wyczyszczenie plików cookie YouTube i Google, zamknięcie kart YT i ponowne uruchomienie przeglądarki.<br><br>Jest również <b>dobry poradnik</b> stworzony przez ekipę uBO na <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddicie</a>. <b>Koniecznie przeczytaj i postępuj zgodnie z nim.</b>",
+    "h2-2-recommends": "Jeżeli aktualizacja <b>nie rozwiązała problemu</b> po twojej stronie, to znaczy, że <b><i>coś innego to powoduje</i></b> - najprawdopodobniej inne rozszerzenie lub twoja konfiguracja.<br>Próbowanie ciągłego aktualizowania nic nie zmieni. Dlatego naprawdę upewnij się, że przeczytałeś i śledziłeś mega wątek reddit.<br><br>",
+    "h2-2-donotspam": "Prosimy o NIE spamowanie guzika aktualizatora linków.",
+    "update-button": "Aktualizuj uBO Szybkie poprawki",
+    "h2-2-no": "Zaleca się poczekać, aż uBlock Origin zaktualizuje swoje filtry i wrócić później.",
+
+    "h2-3": "Co robi ta strona?",
+    "h2-3-1": "Strona pobiera informacje o najnowszym <a href='https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt' class='new-tab'>ID skryptu YT rozwiązanym przez uBlock Origin</a> i porównuje go z najnowszym <a href='https://pastefy.app/G1Txv5su/raw' class='new-tab'>ID skryptu YouTube Anti-Adblocker</a>. Jeśli jest taki sam, to znaczy, że zespół uBlock Origin zaktualizował swoje filtry. Jeśli nie, poprawka jest w drodze. Ta strona nie sprawdza, czy twoja wersja uBlock Origin jest aktualna.",
+    
+    "h2-4": "Jak mogę współtworzyć tę stronę?",
+    "h2-4-1": "Możesz wprowadzać zmiany i przesyłać pull requesty do gałęzi <a href='https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev' style='text-decoration: none;'><code>dev</code></a>.",
+    "h2-4-2": "Należy pamiętać, że wszyscy jesteśmy wolontariuszami. Nie czerpiemy z tego żadnych dochodów i nie możemy być online 24/7. Dziękujemy za zrozumienie!"
+}

@@ -25,9 +25,24 @@ Contains the style for the floating, bottom right, menubar.
     text-decoration: none;
     margin-right: 10px;
   }
-  #language-switch-img {
-    filter: none !important
+  .language-switch-img {
+    filter: none !important;
+    height: 100% !important;
+    width: 40px;
+    display: block;
   } 
+  #language-switch {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    margin-right: 10px;
+  }
+  #globe {cursor: pointer;}
+  #languages.hidden {
+    opacity: 0;
+  }
+  #languages {
+    transition: opacity 0.2s ease-in-out;
+  }
   #menubar img{
     height: inherit;
     filter: var(--icon-color);
