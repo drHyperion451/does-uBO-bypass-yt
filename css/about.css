@@ -6,6 +6,7 @@ Contains the style for the text body.
 #about{
   width: 85%;
   text-align: center;
+  margin-bottom: 35px;
 }
 #about h2{
   margin-top: 45px;
