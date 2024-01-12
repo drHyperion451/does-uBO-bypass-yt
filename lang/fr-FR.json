@@ -1,0 +1,35 @@
+{
+    "html-title": "Est-ce que uBlock Origin (uBO) contourne actuellement la détection de bloqueur de publicités de YouTube ?",
+    "main-question": "Est-ce que uBlock Origin (uBO) contourne le dernier script anti-bloqueur de publicités de YouTube ?",
+    "answer-default": "Aucune idée",
+    "answer-yes": "OUI",
+    "answer-no": "NON",
+
+    "troubleshoot-footer": "Vous avez toujours cette fenêtre pop-up gênante ? Consultez <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin</a>",
+    "update-since-yes": "Dernière solution :  ",
+    "update-since-no": "Script YT modifié :  ",
+
+    "h2-1": "Que cela signifie-t-il ?",
+    "h2-1-default": "Nous évaluons actuellement si les filtres de uBlock Origin ont été mis à jour pour faire face au dernier script anti-bloqueur de publicités. Ce site web ne vérifie pas votre appareil. Il compare simplement les fichiers texte fournis par l'équipe uBO pour vous informer de l'état actuel des solutions de uBO pour YouTube.",
+    "h2-1-yes": "Cela signifie que les filtres de uBO peuvent contourner le script anti-bloqueur de publicités, et que vous pouvez regarder YouTube sans publicités en toute sécurité.",
+    "h2-1-no": "Cela signifie que les filtres de uBO n'ont pas encore été mis à jour pour contourner le dernier script anti-bloqueur de publicités de YouTube, vous pourriez donc être détecté à nouveau.",
+
+    "h3-1": "Cela signifie-t-il que uBlock Origin ne fonctionne pas du tout sur YouTube ?",
+    "h3-1-1": "Un ID différent ne signifie pas toujours que la détection se produira.",
+    "h3-1-2": "uBlock Origin pourrait toujours fonctionner sur YouTube. Toutes les mises à jour de YT ne visent pas les solutions de uBO.",
+
+    "h2-2": "Que dois-je faire maintenant ?",
+    "h2-2-default": "Veuillez revenir plus tard.",
+    "h2-2-yes": "Vous pourriez avoir besoin de forcer la mise à jour de la liste 'uBlock filters - Quick fixes' dans uBlock Origin et supprimer les conflits potentiels causés par d'autres extensions ou différentes causes externes à la détection. Se déconnecter et effacer les cookies YouTube et Google, fermer les onglets YT et redémarrer votre navigateur est également utile.<br><br>Il y a <b>un bon guide</b> fait par l'équipe uBO eux-mêmes sur <a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddit</a>. <b>Assurez-vous de le lire et de le suivre.</b>",
+    "h2-2-recommends": "Si la mise à jour elle-même n'a pas résolu le problème de votre côté, cela signifie <b><i>quelque chose d'autre le cause</i></b> - probablement une autre extension ou votre configuration personnalisée.<br>Essayer de la mettre à jour indéfiniment ne changera rien. Assurez-vous donc vraiment d'avoir lu et suivi le fil de discussion méga Reddit.<br><br>",
+    "h2-2-donotspam": "Veuillez NE PAS cliquer de manière abusive sur le lien de mise à jour.",
+    "update-button": "Mettre à jour les correctifs rapides de uBO",
+    "h2-2-no": "Il est recommandé d'attendre que uBlock Origin mette à jour ses filtres et de revenir plus tard.",
+
+    "h2-3": "Que fait ce site web ?",
+    "h2-3-1": "Il obtient simplement les informations du dernier <a href='https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt' class='new-tab'>ID du script YT résolu par uBlock Origin</a> et le compare au dernier <a href='https://pastefy.app/G1Txv5su/raw' class='new-tab'>ID du script anti-bloqueur de publicités de YouTube</a>. S'ils sont identiques, l'équipe uBlock Origin a finalement mis à jour ses filtres. Sinon, une correction est en cours. Ce site web ne vérifie pas si votre version de uBlock Origin est à jour.",
+    
+    "h2-4": "Comment puis-je contribuer à ce site web ?",
+    "h2-4-1": "Vous pouvez apporter des modifications et soumettre une demande d'extraction à la branche <a href='https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev' style='text-decoration: none;'><code>dev</code></a>.",
+    "h2-4-2": "Veuillez garder à l'esprit que nous sommes tous des volontaires. Nous ne tirons aucun revenu de cela et nous ne pouvons pas être en ligne 24/7. Merci de votre compréhension !"
+}
