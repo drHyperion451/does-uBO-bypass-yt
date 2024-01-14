@@ -56,3 +56,7 @@ Contains the style for the floating, bottom right, menubar.
     /* Only changes the icons that has this class*/
     filter: var(--icon-color);
   }
+  /* icon too dark on defult */
+  #github-repo{
+  filter: brightness(1.2)
+  }
