@@ -21,10 +21,9 @@ async function quickFilterButtonChange(dateiso){
     if (secondsPast < 60*10 || secondsPast > 3600*14){ // 10 min or 14h
         div_btn_element.setAttribute('style', 'display:none;');
     }
-    if (secondsPast < 3600*6){ // 6h
+    if (secondsPast < 3600*14){ // 14h
         btn_element.setAttribute('onclick', `window.location='${url_manual}';`);
-    } else {
-        btn_element.setAttribute('onclick', `window.location='${url_auto}';`);
+    }
     };
 
 }
