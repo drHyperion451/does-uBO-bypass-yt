@@ -7,7 +7,7 @@
 
     "troubleshoot-footer": "Still having the annoying popup? See <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin",
     "update-since-yes": "Latest solution:  ",
-    "update-since-no": "YT script changed:  ",
+    "update-since-no": "YT script last changed:  ",
 
     "h2-1": "What does it mean?",
     "h2-1-default": "We are currently evaluating if uBlock Origin's filters have been updated to deal with the latest Anti-Adblocker script. This website doesn't check your device. It simply compares text files provided by the uBO team to let you know the current status of uBO's solutions for YouTube.",

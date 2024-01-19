@@ -59,6 +59,9 @@ Contains the style for the main banner (the big green/red thing).
     grid-template-columns: auto auto;
     column-gap: 15px;
 }
+#main-codes-div a {
+    color: var(--main-color);
+}
 #last-time-updated-div{
     /* Centered Updated since text*/
     display: flex;
