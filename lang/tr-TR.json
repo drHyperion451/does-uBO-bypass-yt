@@ -1,0 +1,35 @@
+{
+    "html-title": "uBlock Origin (uBO) şu anda YouTube'un adblock tespitini önlüyor mu?",
+    "main-question": "uBlock Origin (uBO) güncel YouTube Anti-Adblock script'ini (kodunu) engelliyor mu?",
+    "answer-default": "Bilinmiyor",
+    "answer-yes": "EVET",
+    "answer-no": "HAYIR",
+
+    "troubleshoot-footer": "Hâlâ rahatsız edici popup'ı mı görüyorsunuz? <a href='https://www.reddit.com/r/uBlockOrigin/' class='new-tab'>r/uBlockOrigin'e</a> göz atın",
+    "update-since-yes": "Güncel çözüm:  ",
+    "update-since-no": "YT script'i değişti:  ",
+
+    "h2-1": "Bu ne anlama geliyor?",
+    "h2-1-default": "Şu anda uBlock Origin filtrelerinin güncel Anti-Adblock script'ini önleyip önlemediğini ölçüyoruz. Bu site cihazınızı kontrol etmez. Yalnızca uBO ekibi tarafından sağlanan metin dosyalarını kıyaslayarak uBO'nun YouTube için sunduğu çözümlerin mevcut durumunu size bildirir.",
+    "h2-1-yes": "Bu, uBlock Origin filtrelerinin Anti-Adblock script'ini önleyebildiği, YouTube'u güvenli ve reklamsız şekilde kullanabileceğiniz anlamına gelir.",
+    "h2-1-no": "Bu, uBlock Origin filtrelerinin henüz güncel YouTube Anti-Ablock script'ini engelleyecek şekilde güncellenmediği anlamına gelir, yani adblock tespiti söz konusu olabilir.",
+
+    "h3-1": "Bu, uBlock Origin'in YouTube'da hiç çalışmadığı anlamına mı geliyor?",
+    "h3-1-1": "Farklı bir script kimliği her zaman tespitin gerçekleşeceği anlamına gelmiyor.",
+    "h3-1-2": "uBlock Origin YouTube'da hala çalışıyor olabilir. Tüm YouTube güncellemeleri uBO'nun çözümlerini hedef almıyor.",
+
+    "h2-2": "Şimdi ne yapmalıyım?",
+    "h2-2-default": "Lütfen daha sonra tekrar gelin.",
+    "h2-2-yes": "uBlock Origin'deki 'uBlock filters - Quick fixes' listesini güncellemeye zorlamanız ve diğer eklentiler tarafından oluşan potansiyel çakışmaları veya tespit edilmeye sebep olacak harici etmenleri kaldırmanız gerekebilir. YouTube'dan çıkış yapıp YouTube ve Google çerezlerinizi temizlemek, YouTube sekmelerini kapatıp tarayıcınızı yeniden başlatmak da faydalı olacaktır.<br><br><a href='https://www.reddit.com/r/uBlockOrigin/about/sticky?num=2' class='new-tab'>Reddit'te</a> uBO ekibinin kendisi tarafından hazırlanan <b>iyi bir rehber</b> var. <b>Okuduğunuzdan ve adımları takip ettiğinizden emin olun.</b>",
+    "h2-2-recommends": "Güncellemenin kendisi sizin tarafınızdaki <b>sorunu çözmediyse</b> <b><i>başka bir şey buna neden oluyor demektir</i></b> - muhtemelen başka bir eklenti veya kendi özel yapılandırmanız. Sürekli güncellemeye çalışmak hiçbir şeyi değiştirmeyecek. Bu nedenle Reddit mega thread'ini okuduğunuzdan ve adımları takip ettiğinizden emin olun.<br><br>",
+    "h2-2-donotspam": "Lütfen bağlantı güncelleyiciyi SPAM'LEMEYİN.",
+    "update-button": "uBO Quick Fixes filtre listesini güncelleyin",
+    "h2-2-no": "uBlock Origin'in filtrelerini güncellemesini beklemeniz ve daha sonra kontrol etmeniz önerilir.",
+
+    "h2-3": "Bu site ne işe yarıyor?",
+    "h2-3-1": "Basitçe <a href='https://raw.githubusercontent.com/stephenhawk8054/misc/main/yt-fix.txt' class='new-tab'>uBlock Origin tarafından çözülen son script kimliğini</a> alır ve onu <a href='https://pastefy.app/G1Txv5su/raw' class='new-tab'>YouTube Anti-Adblock script kimliğiyle</a> kıyaslar. Aynı ise uBlock Origin ekibi filtrelerini güncellemiş demektir. Farklı ise çözüm üzerinde çalıştıkları anlamına gelir. Bu site sizin uBlock Origin sürümünüzün güncel olup olmadığını kotrol etmez.",
+
+    "h2-4": "Bu siteye nasıl katkıda bulunabilirim?",
+    "h2-4-1": "Değişiklikler yapabilir ve <a href='https://github.com/drHyperion451/does-uBO-bypass-yt/tree/dev' style='text-decoration: none;'><code>dev</code></a> branch'ine pull request atabilirsiniz",
+    "h2-4-2": "Lütfen hepimizin gönüllü olduğunu unutmayın. Bundan herhangi bir gelir elde etmiyoruz ve 7/24 çevrim içi olamayız. Anlayışınız için teşekkürler!"
+}
